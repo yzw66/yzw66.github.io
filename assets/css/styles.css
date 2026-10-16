@@ -134,6 +134,8 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--violet); outlin
 .news-list time { color: var(--date); font-weight: 700; font-style: italic; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .news-list time::after { content: ":"; margin-left: 4px; }
 .news-list p { margin: 0; }
+/* Keep icons added beside paper links in the surrounding text flow. */
+.news-list p svg, .news-list p img { display: inline-block; vertical-align: middle; }
 .news-list strong { color: var(--violet); font-weight: 700; }
 .news-list a { color: var(--violet); font-weight: 700; text-decoration: none; }
 .news-list a:hover { text-decoration: underline; }
