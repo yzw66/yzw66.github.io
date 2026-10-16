@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-labelledby="title description">
+  <title id="title">LFEvent method overview</title>
+  <desc id="description">A schematic redrawn from the published abstract. An MLLM enriches image–text pairs with event themes, event types and image descriptions to construct positive samples. A Siamese network learns representations through label-free contrastive learning. Structural entropy-guided clustering detects events without a predefined cluster count.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 10 5 0 10Z" fill="#71819d"/></marker>
+  </defs>
+  <rect width="1200" height="480" rx="16" fill="#fff"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#26324f">
+    <g fill="none" stroke="#71819d" stroke-width="3" marker-end="url(#arrow)">
+      <path d="M198 215H245"/>
+      <path d="M476 215H524"/>
+      <path d="M764 215H816"/>
+      <path d="M116 316V402H645V326" stroke-dasharray="8 6"/>
+    </g>
+    <rect x="25" y="98" width="173" height="218" rx="16" fill="#f0f5fb" stroke="#c8d5e8" stroke-width="2"/>
+    <text x="111" y="76" text-anchor="middle" font-size="24" font-weight="700">Social posts</text>
+    <rect x="55" y="126" width="113" height="69" rx="9" fill="#fff" stroke="#91a8ce" stroke-width="2"/>
+    <path d="m65 184 29-30 21 20 16-17 26 27" fill="none" stroke="#849ec5" stroke-width="3"/>
+    <circle cx="142" cy="143" r="7" fill="#e7bf6b"/>
+    <rect x="55" y="210" width="113" height="57" rx="9" fill="#fff" stroke="#91a8ce" stroke-width="2"/>
+    <path d="M69 228H154M69 240H147M69 252H126" stroke="#9aaecb" stroke-width="3"/>
+    <text x="111" y="295" text-anchor="middle" font-size="21">Image + text</text>
+
+    <rect x="246" y="98" width="230" height="218" rx="16" fill="#f3effc" stroke="#c4b6e5" stroke-width="2"/>
+    <text x="361" y="61" text-anchor="middle" font-size="24" font-weight="700">MLLM semantic</text>
+    <text x="361" y="87" text-anchor="middle" font-size="24" font-weight="700">enhancement</text>
+    <g font-size="21" text-anchor="middle">
+      <rect x="264" y="119" width="194" height="41" rx="8" fill="#fff"/><text x="361" y="147">Event theme</text>
+      <rect x="264" y="174" width="194" height="41" rx="8" fill="#fff"/><text x="361" y="202">Event type</text>
+      <rect x="264" y="229" width="194" height="41" rx="8" fill="#fff"/><text x="361" y="257">Image description</text>
+      <text x="361" y="298" fill="#76639c">Positive samples</text>
+    </g>
+
+    <rect x="525" y="98" width="239" height="218" rx="16" fill="#edf6f5" stroke="#a5cdc7" stroke-width="2"/>
+    <text x="644" y="61" text-anchor="middle" font-size="24" font-weight="700">Label-free</text>
+    <text x="644" y="87" text-anchor="middle" font-size="24" font-weight="700">contrastive learning</text>
+    <rect x="545" y="125" width="199" height="58" rx="9" fill="#fff" stroke="#84b7ae" stroke-width="2"/>
+    <rect x="545" y="218" width="199" height="58" rx="9" fill="#fff" stroke="#84b7ae" stroke-width="2"/>
+    <text x="644" y="162" text-anchor="middle" font-size="24">Encoder</text>
+    <text x="644" y="255" text-anchor="middle" font-size="24">Encoder</text>
+    <path d="M644 185V214" stroke="#589b8d" stroke-width="3" stroke-dasharray="5 4"/>
+    <text x="644" y="300" text-anchor="middle" font-size="21" fill="#4f897e">Siamese network</text>
+    <text x="359" y="435" text-anchor="middle" font-size="22" fill="#71819d">Original image–text pairs</text>
+
+    <rect x="817" y="98" width="357" height="218" rx="16" fill="#fff7eb" stroke="#e8cea0" stroke-width="2"/>
+    <text x="996" y="61" text-anchor="middle" font-size="24" font-weight="700">Structural entropy</text>
+    <text x="996" y="87" text-anchor="middle" font-size="24" font-weight="700">guided clustering</text>
+    <g fill="none" stroke-width="2">
+      <ellipse cx="893" cy="180" rx="49" ry="54" stroke="#97b3dc" stroke-dasharray="6 5"/>
+      <ellipse cx="1013" cy="207" rx="50" ry="54" stroke="#a59cd2" stroke-dasharray="6 5"/>
+      <ellipse cx="1110" cy="163" rx="43" ry="47" stroke="#7fb9ab" stroke-dasharray="6 5"/>
+    </g>
+    <g fill="#8caddc"><circle cx="878" cy="157" r="10"/><circle cx="911" cy="174" r="10"/><circle cx="882" cy="201" r="10"/></g>
+    <g fill="#ab9ed4"><circle cx="995" cy="194" r="10"/><circle cx="1031" cy="190" r="10"/><circle cx="1012" cy="227" r="10"/></g>
+    <g fill="#7bb9a7"><circle cx="1095" cy="148" r="10"/><circle cx="1125" cy="165" r="10"/><circle cx="1099" cy="187" r="10"/></g>
+    <text x="996" y="299" text-anchor="middle" font-size="21" fill="#96784c">No predefined event count</text>
+  </g>
+</svg>
