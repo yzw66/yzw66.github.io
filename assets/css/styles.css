@@ -130,6 +130,15 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--violet); outlin
 .lead-paper h3 a { color: var(--title-link); text-decoration: none; }
 .lead-paper h3 a:hover { color: var(--violet); text-decoration: underline; }
 .lead-paper-venue { margin: 11px 0 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+.paper-topics { display: flex; flex-wrap: wrap; gap: 6px; margin: 9px 0 0; padding: 0; list-style: none; }
+.paper-topic { display: inline-flex; align-items: center; max-width: 100%; padding: 3px 8px; border: 1px solid #435883; border-radius: 999px; background: #1b2a4a; color: #b9ccff; font-size: 11.5px; font-weight: 500; line-height: 1.3; }
+.paper-topic[data-tone="teal"] { border-color: #31695c; background: #123831; color: #98dfcd; }
+.paper-topic[data-tone="amber"] { border-color: #78562b; background: #3a2a16; color: #f0cd94; }
+.paper-topic[data-tone="violet"] { border-color: #615181; background: #2b2344; color: #d2bfff; }
+:root[data-theme="light"] .paper-topic { border-color: #aab9f6; background: #edf1ff; color: #2948a5; }
+:root[data-theme="light"] .paper-topic[data-tone="teal"] { border-color: #84c9bd; background: #eaf8f5; color: #176d62; }
+:root[data-theme="light"] .paper-topic[data-tone="amber"] { border-color: #e6b86e; background: #fff3df; color: #8a4b12; }
+:root[data-theme="light"] .paper-topic[data-tone="violet"] { border-color: #c5adea; background: #f3edff; color: #6f429f; }
 .self-author { padding: 1px 4px; border-radius: 4px; background: var(--author-bg); color: var(--author-text); font-weight: 700; white-space: nowrap; }
 
 .publication-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 3px 0 17px; border-bottom: 1px solid var(--border); }

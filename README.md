@@ -44,7 +44,7 @@ git push -u origin main
 - GitHub：https://github.com/yzw66。
 - DBLP：https://dblp.org/pid/78/8054-9（按本人提供的链接使用）。
 - 学术服务：AAAI、ICLR、ACM Multimedia 审稿人；未添加未经确认的年份。
-- 一作/共一/通讯论文：按本人简历选列 3 篇已发表会议论文，参照参考站中文页，展示 overview 图、题目和会议；不展示作者列表或在投分组。
+- 一作/共一/通讯论文：选列 3 篇已发表会议论文、已被 ISSRE 2026 接收的 CARE，以及 Musical Forgetting 预印本，共 5 篇；后两篇的共一身份由本人确认。参照参考站中文页，展示 overview 图、题目、会议或预印本状态，以及每篇 1–2 个研究主题标签；不展示作者列表或在投分组。
 - 荣誉与奖励：按本人简历整理 2022–2025 年奖项及本科连续四年校一等奖学金，支持中英文切换。
 - 照片：按当前偏好不展示照片，侧栏直接显示姓名与联系方式。
 
@@ -59,7 +59,7 @@ git push -u origin main
 
 论文与动态为静态内容，不会自动从 Google Scholar 更新。增加论文时，将条目加到对应 `.publication-group` 下的 `.publication-list`，填写 `data-year`；新增年份还需添加年份分组和对应的筛选按钮。修改并推送 `main` 后，Pages 会自动重新部署。
 
-一作/共一/通讯论文区域使用独立的 `.lead-paper-list`，不参与完整论文列表的年份筛选和计数。每张卡片由 `.lead-paper-overview` 和 `.lead-paper-info` 组成，两部分使用固定网格区域定位；桌面端左右排列，手机端上下排列。荣誉奖励在 `#honors` 中按年份维护。
+一作/共一/通讯论文区域使用独立的 `.lead-paper-list`，不参与完整论文列表的年份筛选和计数。每张卡片由 `.lead-paper-overview` 和 `.lead-paper-info` 组成，两部分使用固定网格区域定位；桌面端左右排列，手机端上下排列。精选卡片和完整论文列表都使用 `.paper-topics` 展示研究主题标签，标签的 `data-en`、`data-zh` 需同步维护；同一论文在两个区域的标签应保持一致。荣誉奖励在 `#honors` 中按年份维护。
 
 ## 内容来源
 
@@ -67,10 +67,13 @@ git push -u origin main
 
 - [Google Scholar](https://scholar.google.com.hk/citations?user=mNw4PDEAAAAJ&hl=zh-CN) 公开资料与各论文的出版页面。
 - 本人提供的 GitHub、邮箱、DBLP、审稿服务信息，以及 2026-10-16 提供的简历中的论文角色、投稿状态和荣誉奖励；个人介绍中的博士研究生身份、导师、研究方向及两个公开邮箱采用本人最新确认的信息。
+- Musical Forgetting 与 CARE 的共一身份由本人补充确认。CARE 的录用状态来自 [arXiv 原文页面](https://arxiv.org/abs/2607.21642) 的 “Accepted by ISSRE 2026” 注释；Musical Forgetting 继续标记为 arXiv 预印本。研究主题标签根据各论文题目及摘要归纳。
 - 论文配图素材从作者公开 PDF 中裁出方法图（`*-teaser.png`），原始页面图片保留供后续维护。
 
 当前图文论文卡片的 overview 来源：
 
+- `care-teaser.png`：[CARE 论文](https://arxiv.org/abs/2607.21642) 中已有的方法总览图，展示 Canonicalization、Attribution 和 Resolution 三个阶段。
+- `musical-forgetting-overview.png`：[Musical Forgetting 论文 v2](https://arxiv.org/html/2606.15088v2#S2.F2) Figure 2 的 PPCP 方法总览；使用 arXiv HTML 中的[原始图片](https://arxiv.org/html/2606.15088v2/overview.png)。
 - `seinevent-overview.png`：AAAI 2026 [官方开放论文](https://ojs.aaai.org/index.php/AAAI/article/download/38647/42609) 第 3 页 Figure 2，裁出完整方法图。
 - `label-free-overview.svg`：根据 WSDM 2026 [论文摘要](https://doi.org/10.1145/3773966.3777919) 绘制的方法示意图，并非论文原图。流程为 MLLM 语义增强 → 正样本构建与孪生网络无标签对比学习 → 结构熵引导的事件聚类。摘要通过 [Semantic Scholar](https://www.semanticscholar.org/paper/451af0863cb52e31ddebeb4ae98aa8213bf7734f) 核对；当前环境无法读取 ACM 官网原图，后续可替换为作者提供的 overview。
 - `adp-sem-teaser.png`：CIKM 2024 ADP-SEMEvent 论文中已有的方法总览图。
