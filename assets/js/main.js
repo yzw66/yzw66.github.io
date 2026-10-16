@@ -43,6 +43,9 @@
     document.querySelectorAll('[data-en][data-zh]').forEach((node) => {
       node.textContent = node.dataset[language()];
     });
+    document.querySelectorAll('[data-alt-en][data-alt-zh]').forEach((node) => {
+      node.setAttribute('alt', node.getAttribute(`data-alt-${language()}`));
+    });
     document.title = language() === 'zh' ? '杨志伟 | 学术主页' : 'Zhiwei Yang | Academic Homepage';
     if (save) persist('site-language', language());
     updateControls();
@@ -100,7 +103,7 @@
   document.addEventListener('click', (event) => {
     if (!header.contains(event.target)) closeMenu();
   });
-  window.matchMedia('(min-width: 641px)').addEventListener('change', closeMenu);
+  window.matchMedia('(min-width: 701px)').addEventListener('change', closeMenu);
   let scheduled = false;
   window.addEventListener('scroll', () => {
     if (scheduled) return;

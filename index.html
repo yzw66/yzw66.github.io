@@ -15,7 +15,7 @@
   <title>Zhiwei Yang | Academic Homepage</title>
   <link rel="canonical" href="https://yzw66.github.io/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/styles.css?v=20261016-paper-topics">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261016-education">
   <script>
     try {
       const theme = localStorage.getItem('site-theme');
@@ -40,6 +40,7 @@
         <a href="#news" data-section="news" data-en="News" data-zh="动态">News</a>
         <a href="#publications" data-section="publications" data-en="Publications" data-zh="论文">Publications</a>
         <a href="#service" data-section="service" data-en="Services" data-zh="学术服务">Services</a>
+        <a href="#education" data-section="education" data-en="Education" data-zh="教育经历">Education</a>
         <a href="#honors" data-section="honors" data-en="Honors and Awards" data-zh="荣誉与奖励">Honors and Awards</a>
       </nav>
       <div class="header-controls" role="group" aria-label="Page preferences">
@@ -58,10 +59,13 @@
   <main class="page-shell" id="main-content">
     <aside class="profile-rail" aria-label="Profile summary">
       <div class="profile-sticky">
-        <div class="profile-identity">
-          <h2 class="profile-name">Zhiwei Yang</h2>
-          <p class="profile-name-zh" lang="zh-CN">杨志伟</p>
-          <p class="profile-affiliation" data-en="Institute of Information Engineering, Chinese Academy of Sciences" data-zh="中国科学院信息工程研究所">Institute of Information Engineering, Chinese Academy of Sciences</p>
+        <div class="profile-overview">
+          <img class="profile-photo" src="assets/images/yzw.jpg" width="464" height="706" decoding="async" fetchpriority="high" data-alt-en="Portrait of Zhiwei Yang" data-alt-zh="杨志伟个人照片" alt="Portrait of Zhiwei Yang">
+          <div class="profile-identity">
+            <h2 class="profile-name">Zhiwei Yang</h2>
+            <p class="profile-name-zh" lang="zh-CN">杨志伟</p>
+            <p class="profile-affiliation" data-en="Institute of Information Engineering, Chinese Academy of Sciences" data-zh="中国科学院信息工程研究所">Institute of Information Engineering, Chinese Academy of Sciences</p>
+          </div>
         </div>
         <p class="profile-location"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"></path></svg><span data-en="Beijing, China" data-zh="中国，北京">Beijing, China</span></p>
         <ul class="profile-links"><li><a class="profile-email" aria-label="Email: yangzhiwei@iie.ac.cn" href="mailto:yangzhiwei@iie.ac.cn">
@@ -140,11 +144,12 @@
             </a>
             <div class="lead-paper-info">
               <h3><a href="https://arxiv.org/abs/2609.06059" target="_blank" rel="noopener noreferrer">OmniStepBench: Deployment-Aware Agent Evaluation across Modalities and Task Complexity</a></h3>
-              <p class="lead-paper-venue"><span data-en="arXiv preprint, 2026" data-zh="arXiv 预印本，2026">arXiv preprint, 2026</span><span data-en=" · Co-first author" data-zh=" · 共一"> · Co-first author</span></p>
+              <p class="lead-paper-venue" data-en="arXiv preprint, 2026" data-zh="arXiv 预印本，2026">arXiv preprint, 2026</p>
               <ul class="paper-topics">
                 <li class="paper-topic" data-en="Agent Evaluation" data-zh="智能体评测">Agent Evaluation</li>
                 <li class="paper-topic" data-tone="teal" data-en="Multimodal Benchmarks" data-zh="多模态基准">Multimodal Benchmarks</li>
               </ul>
+              <p class="lead-paper-summary" data-en="Builds a deployment-aware benchmark that evaluates text and multimodal agents across task complexity while jointly considering accuracy and cost." data-zh="构建面向部署的智能体评测基准，在不同任务复杂度下综合考察文本与多模态智能体的准确率和成本。">Builds a deployment-aware benchmark that evaluates text and multimodal agents across task complexity while jointly considering accuracy and cost.</p>
             </div>
           </article>
           <article class="lead-paper">
@@ -154,11 +159,12 @@
             </a>
             <div class="lead-paper-info">
               <h3><a href="https://arxiv.org/abs/2609.03493" target="_blank" rel="noopener noreferrer">Making Every Tool Call Count: Necessary Tool-Evidence Path Rewards for Agentic Vision-Language Models</a></h3>
-              <p class="lead-paper-venue"><span data-en="arXiv preprint, 2026" data-zh="arXiv 预印本，2026">arXiv preprint, 2026</span><span data-en=" · Co-first author" data-zh=" · 共一"> · Co-first author</span></p>
+              <p class="lead-paper-venue" data-en="arXiv preprint, 2026" data-zh="arXiv 预印本，2026">arXiv preprint, 2026</p>
               <ul class="paper-topics">
                 <li class="paper-topic" data-tone="teal" data-en="Multimodal Agents" data-zh="多模态智能体">Multimodal Agents</li>
                 <li class="paper-topic" data-en="Tool Use" data-zh="工具调用">Tool Use</li>
               </ul>
+              <p class="lead-paper-summary" data-en="Introduces NTEP-R, which rewards necessary tool-evidence paths to improve tool-use efficiency and reliability in agentic vision-language models." data-zh="提出 NTEP-R，以必要的工具—证据路径奖励提升视觉语言智能体的工具调用效率与可靠性。">Introduces NTEP-R, which rewards necessary tool-evidence paths to improve tool-use efficiency and reliability in agentic vision-language models.</p>
             </div>
           </article>
           <article class="lead-paper">
@@ -168,11 +174,12 @@
             </a>
             <div class="lead-paper-info">
               <h3><a href="https://arxiv.org/abs/2608.25531" target="_blank" rel="noopener noreferrer">ClueWeaver: Reward-Guided Dual-Agent Evidence Reasoning for Compact LLMs on Literary Long Narratives</a></h3>
-              <p class="lead-paper-venue"><span data-en="ICONIP 2026 (accepted)" data-zh="ICONIP 2026（已录用）">ICONIP 2026 (accepted)</span><span data-en=" · Co-first author" data-zh=" · 共一"> · Co-first author</span></p>
+              <p class="lead-paper-venue" data-en="ICONIP 2026 (accepted)" data-zh="ICONIP 2026（已录用）">ICONIP 2026 (accepted)</p>
               <ul class="paper-topics">
                 <li class="paper-topic" data-en="Multi-agent Reasoning" data-zh="多智能体推理">Multi-agent Reasoning</li>
                 <li class="paper-topic" data-tone="teal" data-en="Long-context QA" data-zh="长文本问答">Long-context QA</li>
               </ul>
+              <p class="lead-paper-summary" data-en="Uses reward-guided Finder and Interpreter agents to help compact LLMs reason over evidence in long literary narratives." data-zh="通过奖励引导的 Finder 与 Interpreter 双智能体，帮助紧凑型大模型在长篇文学文本中开展证据推理。">Uses reward-guided Finder and Interpreter agents to help compact LLMs reason over evidence in long literary narratives.</p>
             </div>
           </article>
           <article class="lead-paper">
@@ -182,11 +189,12 @@
             </a>
             <div class="lead-paper-info">
               <h3><a href="https://arxiv.org/abs/2607.19935" target="_blank" rel="noopener noreferrer">MOF-Sleuth: Tool-Grounded Reward Alignment for Explainable Fine-Grained MOF CIF Auditing</a></h3>
-              <p class="lead-paper-venue"><span data-en="arXiv preprint, 2026" data-zh="arXiv 预印本，2026">arXiv preprint, 2026</span><span data-en=" · Co-first author" data-zh=" · 共一"> · Co-first author</span></p>
+              <p class="lead-paper-venue" data-en="arXiv preprint, 2026" data-zh="arXiv 预印本，2026">arXiv preprint, 2026</p>
               <ul class="paper-topics">
                 <li class="paper-topic" data-tone="teal" data-en="AI for Science" data-zh="AI for Science">AI for Science</li>
                 <li class="paper-topic" data-tone="amber" data-en="Reinforcement Learning" data-zh="强化学习">Reinforcement Learning</li>
               </ul>
+              <p class="lead-paper-summary" data-en="Aligns an agent with tool-grounded rewards to produce explainable, fine-grained audits of metal-organic framework CIF files." data-zh="以工具可验证的奖励对齐智能体，实现对金属有机框架 CIF 文件的可解释细粒度审计。">Aligns an agent with tool-grounded rewards to produce explainable, fine-grained audits of metal-organic framework CIF files.</p>
             </div>
           </article>
           <article class="lead-paper">
@@ -196,11 +204,12 @@
             </a>
             <div class="lead-paper-info">
               <h3><a href="https://arxiv.org/abs/2607.21642" target="_blank" rel="noopener noreferrer">CARE: Pre-Execution Command Verification for Shell-Executing LLM Agents</a></h3>
-              <p class="lead-paper-venue"><span data-en="ISSRE 2026 (accepted)" data-zh="ISSRE 2026（已录用）">ISSRE 2026 (accepted)</span><span data-en=" · Co-first author" data-zh=" · 共一"> · Co-first author</span></p>
+              <p class="lead-paper-venue" data-en="ISSRE 2026 (accepted)" data-zh="ISSRE 2026（已录用）">ISSRE 2026 (accepted)</p>
               <ul class="paper-topics">
                 <li class="paper-topic" data-en="AI Agents" data-zh="AI Agent">AI Agents</li>
                 <li class="paper-topic" data-tone="violet" data-en="Agent Safety" data-zh="智能体安全">Agent Safety</li>
               </ul>
+              <p class="lead-paper-summary" data-en="Verifies shell commands before execution through canonicalization, attribution, and resolution to reduce unsafe actions by LLM agents." data-zh="通过命令规范化、归因与解析，在执行前验证 Shell 命令，降低大模型智能体执行危险操作的风险。">Verifies shell commands before execution through canonicalization, attribution, and resolution to reduce unsafe actions by LLM agents.</p>
             </div>
           </article>
           <article class="lead-paper">
@@ -210,11 +219,12 @@
             </a>
             <div class="lead-paper-info">
               <h3><a href="https://arxiv.org/abs/2606.15088" target="_blank" rel="noopener noreferrer">When the Same Musical Knowledge Forgets Differently: A Clean Probe of Pathway-Dependent Forgetting</a></h3>
-              <p class="lead-paper-venue"><span data-en="arXiv preprint, 2026" data-zh="arXiv 预印本，2026">arXiv preprint, 2026</span><span data-en=" · Co-first author" data-zh=" · 共一"> · Co-first author</span></p>
+              <p class="lead-paper-venue" data-en="arXiv preprint, 2026" data-zh="arXiv 预印本，2026">arXiv preprint, 2026</p>
               <ul class="paper-topics">
                 <li class="paper-topic" data-tone="teal" data-en="Multimodal LLMs" data-zh="多模态大模型">Multimodal LLMs</li>
                 <li class="paper-topic" data-tone="amber" data-en="Knowledge Forgetting" data-zh="知识遗忘">Knowledge Forgetting</li>
               </ul>
+              <p class="lead-paper-summary" data-en="Probes why the same musical knowledge is forgotten differently when acquired through text versus music pathways in multimodal models." data-zh="在知识内容一致的条件下，探究多模态模型经文本与音乐路径习得的知识为何呈现不同遗忘模式。">Probes why the same musical knowledge is forgotten differently when acquired through text versus music pathways in multimodal models.</p>
             </div>
           </article>
           <article class="lead-paper">
@@ -229,6 +239,7 @@
                 <li class="paper-topic" data-tone="teal" data-en="Multimodal Event Detection" data-zh="多模态事件检测">Multimodal Event Detection</li>
                 <li class="paper-topic" data-tone="amber" data-en="Incremental Learning" data-zh="增量学习">Incremental Learning</li>
               </ul>
+              <p class="lead-paper-summary" data-en="Uses structural-entropy-guided noise filtering and incremental contrastive learning to continually discover multimodal social events in an open world." data-zh="以结构熵引导噪声过滤与增量对比学习，持续发现开放世界中的多模态社交事件。">Uses structural-entropy-guided noise filtering and incremental contrastive learning to continually discover multimodal social events in an open world.</p>
             </div>
           </article>
           <article class="lead-paper">
@@ -243,6 +254,7 @@
                 <li class="paper-topic" data-tone="teal" data-en="Multimodal Event Detection" data-zh="多模态事件检测">Multimodal Event Detection</li>
                 <li class="paper-topic" data-tone="amber" data-en="Contrastive Learning" data-zh="对比学习">Contrastive Learning</li>
               </ul>
+              <p class="lead-paper-summary" data-en="Constructs positive pairs with a multimodal large language model and learns label-free representations that generalize to unseen social events." data-zh="借助多模态大模型构造正样本对，在无标签条件下学习可泛化到未知社交事件的表征。">Constructs positive pairs with a multimodal large language model and learns label-free representations that generalize to unseen social events.</p>
             </div>
           </article>
           <article class="lead-paper">
@@ -257,6 +269,7 @@
                 <li class="paper-topic" data-en="Structural Entropy" data-zh="结构熵">Structural Entropy</li>
                 <li class="paper-topic" data-tone="violet" data-en="Differential Privacy" data-zh="差分隐私">Differential Privacy</li>
               </ul>
+              <p class="lead-paper-summary" data-en="Combines adaptive differential privacy with structural entropy minimization for privacy-preserving unsupervised social event detection." data-zh="将自适应差分隐私与结构熵最小化结合，实现兼顾隐私保护与检测效果的无监督社交事件检测。">Combines adaptive differential privacy with structural entropy minimization for privacy-preserving unsupervised social event detection.</p>
             </div>
           </article>
         </div>
@@ -397,6 +410,50 @@
           <li><strong>ACM Multimedia</strong><span data-en=" — Reviewer" data-zh=" —— 审稿人"> — Reviewer</span></li>
         </ul>
       </section>
+      <section class="content-section section-anchor education-section" id="education" aria-labelledby="education-title">
+        <h2 class="section-title" id="education-title"><svg class="section-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-5 9 5-9 5-9-5Z"></path><path d="M7 12.5V17c2.7 2 7.3 2 10 0v-4.5M21 10v6"></path></svg><span data-en="Education" data-zh="教育经历">Education</span></h2>
+        <div class="education-list">
+          <article class="education-item">
+            <div class="education-logo-frame">
+              <img src="assets/images/iie-logo.png" width="124" height="124" loading="lazy" decoding="async" data-alt-en="Institute of Information Engineering, Chinese Academy of Sciences logo" data-alt-zh="中国科学院信息工程研究所所徽" alt="Institute of Information Engineering, Chinese Academy of Sciences logo">
+            </div>
+            <div class="education-details">
+              <div class="education-meta">
+                <span class="education-period" data-en="Sep 2026 – Present" data-zh="2026/09 – 今">Sep 2026 – Present</span>
+                <span class="education-status" data-en="Master-to-Ph.D. transfer" data-zh="硕转博">Master-to-Ph.D. transfer</span>
+              </div>
+              <h3 data-en="Ph.D. in Cyberspace Security" data-zh="网络空间安全工学博士">Ph.D. in Cyberspace Security</h3>
+              <p class="education-school"><strong data-en="Institute of Information Engineering, Chinese Academy of Sciences" data-zh="中国科学院信息工程研究所">Institute of Information Engineering, Chinese Academy of Sciences</strong><span aria-hidden="true"> · </span><span data-en="Information Content Analysis Laboratory" data-zh="信息内容分析实验室">Information Content Analysis Laboratory</span></p>
+              <p class="education-note" data-en="Expected graduation in 2029" data-zh="预计 2029 年毕业">Expected graduation in 2029</p>
+            </div>
+          </article>
+          <article class="education-item">
+            <div class="education-logo-frame">
+              <img src="assets/images/iie-logo.png" width="124" height="124" loading="lazy" decoding="async" data-alt-en="Institute of Information Engineering, Chinese Academy of Sciences logo" data-alt-zh="中国科学院信息工程研究所所徽" alt="Institute of Information Engineering, Chinese Academy of Sciences logo">
+            </div>
+            <div class="education-details">
+              <div class="education-meta">
+                <span class="education-period" data-en="Sep 2024 – Sep 2026" data-zh="2024/09 – 2026/09">Sep 2024 – Sep 2026</span>
+                <span class="education-status" data-en="Recommended admission" data-zh="保研">Recommended admission</span>
+              </div>
+              <h3 data-en="M.Eng. in Cyberspace Security" data-zh="网络空间安全工学硕士">M.Eng. in Cyberspace Security</h3>
+              <p class="education-school"><strong data-en="Institute of Information Engineering, Chinese Academy of Sciences" data-zh="中国科学院信息工程研究所">Institute of Information Engineering, Chinese Academy of Sciences</strong><span aria-hidden="true"> · </span><span data-en="Information Content Analysis Laboratory" data-zh="信息内容分析实验室">Information Content Analysis Laboratory</span></p>
+            </div>
+          </article>
+          <article class="education-item">
+            <div class="education-logo-frame">
+              <img src="assets/images/ncst-logo.png" width="350" height="350" loading="lazy" decoding="async" data-alt-en="North China University of Science and Technology logo" data-alt-zh="华北理工大学校徽" alt="North China University of Science and Technology logo">
+            </div>
+            <div class="education-details">
+              <div class="education-meta">
+                <span class="education-period" data-en="Sep 2020 – Jun 2024" data-zh="2020/09 – 2024/06">Sep 2020 – Jun 2024</span>
+              </div>
+              <h3 data-en="B.Eng. in Intelligent Science and Technology" data-zh="本科 · 智能科学与技术专业">B.Eng. in Intelligent Science and Technology</h3>
+              <p class="education-school"><strong data-en="North China University of Science and Technology" data-zh="华北理工大学">North China University of Science and Technology</strong><span aria-hidden="true"> · </span><span data-en="College of Science" data-zh="理学院">College of Science</span></p>
+            </div>
+          </article>
+        </div>
+      </section>
       <section class="content-section section-anchor" id="honors" aria-labelledby="honors-title">
         <h2 class="section-title" id="honors-title"><span class="section-emoji" aria-hidden="true">🎖️</span><span data-en="Honors and Awards" data-zh="荣誉与奖励">Honors and Awards</span></h2>
         <div class="honor-group">
@@ -442,6 +499,6 @@
     </div>
   </main>
   <footer class="site-footer"><div class="footer-inner"><p>© <span class="current-year">2026</span> Zhiwei Yang</p><a href="#top" data-en="Back to top ↑" data-zh="返回顶部 ↑">Back to top ↑</a></div></footer>
-  <script src="assets/js/main.js?v=20261016-paper-overviews" defer></script>
+  <script src="assets/js/main.js?v=20261016-education" defer></script>
 </body>
 </html>
