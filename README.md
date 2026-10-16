@@ -43,6 +43,7 @@ git push -u origin main
 - 邮箱：yangzhiwei@iie.ac.cn、yzw377986686@gmail.com。
 - GitHub：https://github.com/yzw66。
 - DBLP：https://dblp.org/pid/78/8054-9（按本人提供的链接使用）。
+- 完整论文列表：共 17 篇，包含该 DBLP 作者 ID 下的全部 12 篇去重作品，以及原有的 5 篇 Google Scholar 来源论文；每篇保留作者、发表信息、链接和中英文研究标签。
 - 学术服务：AAAI、ICLR、ACM Multimedia 审稿人；未添加未经确认的年份。
 - 一作/共一/通讯论文：选列 3 篇已发表会议论文、已被 ISSRE 2026 接收的 CARE，以及 Musical Forgetting 预印本，共 5 篇；后两篇的共一身份由本人确认。参照参考站中文页，展示 overview 图、题目、会议或预印本状态，以及每篇 1–2 个研究主题标签；不展示作者列表或在投分组。
 - 荣誉与奖励：按本人简历整理 2022–2025 年奖项及本科连续四年校一等奖学金，支持中英文切换。
@@ -66,6 +67,8 @@ git push -u origin main
 初始论文列表整理日期：2026-10-16。
 
 - [Google Scholar](https://scholar.google.com.hk/citations?user=mNw4PDEAAAAJ&hl=zh-CN) 公开资料与各论文的出版页面。
+- 2026-10-16 根据 [DBLP 作者页](https://dblp.org/pid/78/8054-9.html) 补齐 MOF-Sleuth、ClueWeaver、Making Every Tool Call Count、DAREBench / OmniStepBench 和 PB-CLIP。作者页访问验证阻止直接读取时，使用 [DBLP 官方 SPARQL 接口](https://sparql.dblp.org/) 按同一作者 URI `https://dblp.org/pid/78/8054-9` 查询：14 条记录合并 ADP-SEM 与 HyperSED 的预印本/正式版后为 12 篇作品，均已覆盖；原有 Scholar 条目保留。
+- 新增条目的作者顺序和题目由 arXiv 元数据或 Crossref DOI 元数据核对。[ClueWeaver](https://arxiv.org/abs/2608.25531) 原文标注已被 ICONIP 2026 接收；DBLP 的 DAREBench 对应同一 arXiv ID `2609.06059`，现按[最新原文](https://arxiv.org/abs/2609.06059)题目 OmniStepBench 展示并注明原名；[PB-CLIP](https://doi.org/10.1007/978-981-96-9794-6_35) 为 ICIC 2025 Part V，第 419–430 页。
 - 本人提供的 GitHub、邮箱、DBLP、审稿服务信息，以及 2026-10-16 提供的简历中的论文角色、投稿状态和荣誉奖励；个人介绍中的博士研究生身份、导师、研究方向及两个公开邮箱采用本人最新确认的信息。
 - Musical Forgetting 与 CARE 的共一身份由本人补充确认。CARE 的录用状态来自 [arXiv 原文页面](https://arxiv.org/abs/2607.21642) 的 “Accepted by ISSRE 2026” 注释；Musical Forgetting 继续标记为 arXiv 预印本。研究主题标签根据各论文题目及摘要归纳。
 - 论文配图素材从作者公开 PDF 中裁出方法图（`*-teaser.png`），原始页面图片保留供后续维护。
