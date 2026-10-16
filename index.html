@@ -1,221 +1,113 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark" data-language="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="dark light">
-    <meta name="theme-color" content="#0b0e12">
-    <meta name="description" content="Academic homepage of Zhiwei Yang (杨志伟), Institute of Information Engineering, Chinese Academy of Sciences. Research on multimodal social event detection, structural entropy, privacy-preserving learning, and AI agent safety.">
-    <meta name="author" content="Zhiwei Yang">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Zhiwei Yang | Academic Homepage">
-    <meta property="og:url" content="https://yzw66.github.io/">
-    <meta property="og:description" content="Research in open-world multimodal intelligence, structural entropy, trustworthy AI, and agent safety.">
-    <meta property="og:image" content="https://yzw66.github.io/assets/images/hypersed-framework.png">
-
-    <title>Zhiwei Yang | Academic Homepage</title>
-    <link rel="canonical" href="https://yzw66.github.io/">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="assets/css/styles.css">
-
-    <script>
-      document.documentElement.classList.add('js');
-      try {
-        const theme = localStorage.getItem('site-theme');
-        const language = localStorage.getItem('site-language');
-        if (theme === 'light' || theme === 'dark') {
-          document.documentElement.dataset.theme = theme;
-        }
-        if (language === 'en' || language === 'zh') {
-          document.documentElement.dataset.language = language;
-          document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
-        }
-      } catch (error) {
-        // Storage can be unavailable in privacy-restricted browsing contexts.
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Academic homepage of Zhiwei Yang (杨志伟), Institute of Information Engineering, Chinese Academy of Sciences. Research on multimodal social event detection, structural entropy, privacy-preserving learning, and AI agent safety.">
+  <meta name="author" content="Zhiwei Yang">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Zhiwei Yang | Academic Homepage">
+  <meta property="og:url" content="https://yzw66.github.io/">
+  <meta property="og:description" content="Research on multimodal social event detection, structural entropy, privacy-preserving learning, and AI agent safety.">
+  <meta property="og:image" content="https://yzw66.github.io/assets/images/hypersed-teaser.png">
+  <title>Zhiwei Yang | Academic Homepage</title>
+  <link rel="canonical" href="https://yzw66.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261016-academic">
+  <script>
+    try {
+      const theme = localStorage.getItem('site-theme');
+      const language = localStorage.getItem('site-language');
+      if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+      if (language === 'en' || language === 'zh') {
+        document.documentElement.dataset.language = language;
+        document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
       }
-    </script>
-  </head>
-
-  <body>
-    <a class="skip-link" href="#main-content" data-en="Skip to content" data-zh="跳转到正文">Skip to content</a>
-
-    <header class="site-header" id="top">
-      <div class="header-inner">
-        <a class="wordmark" href="#overview" aria-label="Zhiwei Yang homepage">
-          <span class="wordmark-mark" aria-hidden="true">ZY</span>
-          <span class="wordmark-name">Zhiwei Yang</span>
-        </a>
-
-        <button class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation">
-          <svg class="menu-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
-            <path d="M4 7h16M4 12h16M4 17h16"></path>
-          </svg>
-          <svg class="close-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
-            <path d="m6 6 12 12M18 6 6 18"></path>
-          </svg>
+    } catch (error) {
+      // The page remains usable when browser storage is unavailable.
+    }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content" data-en="Skip to content" data-zh="跳转到正文">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="home-link" href="#about-me" data-en="Homepage" data-zh="主页">Homepage</a>
+      <nav class="primary-nav" id="site-navigation" aria-label="Primary navigation">
+        <a href="#about-me" data-section="about-me" data-en="About Me" data-zh="关于我">About Me</a>
+        <a href="#news" data-section="news" data-en="News" data-zh="动态">News</a>
+        <a href="#publications" data-section="publications" data-en="Publications" data-zh="论文">Publications</a>
+        <a href="#service" data-section="service" data-en="Services" data-zh="学术服务">Services</a>
+      </nav>
+      <div class="header-controls" role="group" aria-label="Page preferences">
+        <button class="site-control menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Open navigation">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path class="menu-icon" d="M4 6h16M4 12h16M4 18h16"></path><path class="close-icon" d="m6 6 12 12M18 6 6 18"></path></svg>
         </button>
-
-        <div class="header-panel" id="site-navigation">
-          <nav class="primary-nav" aria-label="Primary navigation">
-            <a href="#overview" data-section="overview" data-en="Overview" data-zh="主页">Overview</a>
-            <a href="#research" data-section="research" data-en="Research" data-zh="研究">Research</a>
-            <a href="#publications" data-section="publications" data-en="Publications" data-zh="论文">Publications</a>
-            <a href="#service" data-section="service" data-en="Service" data-zh="学术服务">Service</a>
-            <a href="#profile" data-section="profile" data-en="Profile" data-zh="资料">Profile</a>
-          </nav>
-
-          <div class="header-controls" role="group" aria-label="Page preferences">
-            <button class="text-control language-toggle" type="button" aria-label="切换到中文">中文</button>
-            <button class="icon-button theme-toggle" type="button" aria-label="Switch to light theme">
-              <svg class="sun-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="3.8"></circle>
-                <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path>
-              </svg>
-              <svg class="moon-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20.5 14.2A8.3 8.3 0 0 1 9.8 3.5 8.4 8.4 0 1 0 20.5 14.2Z"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
+        <button class="site-control language-toggle" type="button" aria-label="切换到中文">中文</button>
+        <button class="site-control theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="true">
+          <svg class="sun-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"></path></svg>
+          <svg class="moon-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14A8.5 8.5 0 0 1 10 3.5 8.5 8.5 0 1 0 20.5 14Z"></path></svg>
+          <span class="theme-label">Light</span>
+        </button>
       </div>
-    </header>
-
-    <main id="main-content">
-      <div class="page-shell">
-        <aside class="profile-rail" aria-label="Profile summary">
-          <div class="profile-sticky">
-            <!-- The ZY monogram is the current profile visual; a portrait is optional. -->
-            <div class="profile-visual" role="img" aria-label="Zhiwei Yang monogram">
-              <span>ZY</span>
-            </div>
-
-            <div class="profile-identity">
-              <p class="profile-name">Zhiwei Yang</p>
-              <p class="profile-name-zh">杨志伟</p>
-              <p class="profile-affiliation" data-en="Institute of Information Engineering, Chinese Academy of Sciences" data-zh="中国科学院信息工程研究所">Institute of Information Engineering, Chinese Academy of Sciences</p>
-            </div>
-
-            <dl class="profile-details">
-              <div>
-                <dt data-en="Based in" data-zh="所在地">Based in</dt>
-                <dd data-en="Beijing, China" data-zh="中国，北京">Beijing, China</dd>
-              </div>
-              <div>
-                <dt data-en="Focus" data-zh="研究方向">Focus</dt>
-                <dd data-en="Multimodal intelligence &amp; trustworthy AI" data-zh="多模态智能与可信人工智能">Multimodal intelligence &amp; trustworthy AI</dd>
-              </div>
-            </dl>
-
-            <div class="profile-links">
-              <a class="profile-email" href="mailto:yangzhiwei@iie.ac.cn">
+    </div>
+  </header>
+  <main class="page-shell" id="main-content">
+    <aside class="profile-rail" aria-label="Profile summary">
+      <div class="profile-sticky">
+        <div class="profile-identity">
+          <h2 class="profile-name">Zhiwei Yang</h2>
+          <p class="profile-name-zh" lang="zh-CN">杨志伟</p>
+          <p class="profile-affiliation" data-en="Institute of Information Engineering, Chinese Academy of Sciences" data-zh="中国科学院信息工程研究所">Institute of Information Engineering, Chinese Academy of Sciences</p>
+        </div>
+        <p class="profile-location"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"></path></svg><span data-en="Beijing, China" data-zh="中国，北京">Beijing, China</span></p>
+        <ul class="profile-links"><li><a class="profile-email" aria-label="Email: yangzhiwei@iie.ac.cn" href="mailto:yangzhiwei@iie.ac.cn">
                 <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="3" y="5" width="18" height="14" rx="2"></rect>
                   <path d="m3 7 9 6 9-6"></path>
                 </svg>
-                <span>yangzhiwei@iie.ac.cn</span>
-              </a>
-              <a href="https://scholar.google.com.hk/citations?user=mNw4PDEAAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">
+                <span data-en="Email" data-zh="电子邮箱">Email</span>
+              </a></li>
+<li><a href="https://scholar.google.com.hk/citations?user=mNw4PDEAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer">
                 <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <path d="m3 10 9-5 9 5-9 5-9-5Z"></path>
                   <path d="M7 12.5V17c2.7 2 7.3 2 10 0v-4.5M21 10v6"></path>
                 </svg>
                 <span>Google Scholar</span>
-              </a>
-              <a href="https://github.com/yzw66" target="_blank" rel="noopener noreferrer">
+              </a></li>
+<li><a href="https://github.com/yzw66" target="_blank" rel="noopener noreferrer">
                 <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M9 19c-4.3 1.3-4.3-2.2-6-2.7M15 22v-3.5a3 3 0 0 0-.8-2.3c2.8-.3 5.8-1.4 5.8-6.3a4.9 4.9 0 0 0-1.3-3.4A4.5 4.5 0 0 0 18.6 3S17.5 2.7 15 4.3a12 12 0 0 0-6 0C6.5 2.7 5.4 3 5.4 3a4.5 4.5 0 0 0-.1 3.5A4.9 4.9 0 0 0 4 9.9c0 4.9 3 6 5.8 6.3a3 3 0 0 0-.8 2.3V22"></path>
                 </svg>
                 <span>GitHub</span>
-              </a>
-              <a href="https://dblp.org/pid/78/8054-9" target="_blank" rel="noopener noreferrer">
+              </a></li>
+<li><a href="https://dblp.org/pid/78/8054-9" target="_blank" rel="noopener noreferrer">
                 <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M4 4h6v16H4zM14 5l5-1 3 15-5 1zM4 8h6M4 16h6"></path>
                 </svg>
                 <span>DBLP</span>
-              </a>
-              <a href="https://www.iie.ac.cn/" target="_blank" rel="noopener noreferrer">
-                <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M3 21h18M5 21V9l7-4 7 4v12M9 13h2v2H9zM13 13h2v2h-2zM9 17h2v4H9zM13 17h2v4h-2z"></path>
-                </svg>
-                <span data-en="Institution" data-zh="所在机构">Institution</span>
-              </a>
-            </div>
-          </div>
-        </aside>
-
-        <div class="content-column">
-          <section class="hero section-anchor" id="overview" aria-labelledby="hero-title">
-            <div class="hero-copy reveal">
-              <h1 id="hero-title">Zhiwei Yang</h1>
-              <p class="hero-name-zh">杨志伟</p>
-              <p class="hero-intro" data-en="I study reliable intelligence for open-world information environments, with a focus on multimodal social event detection, structural entropy, privacy-preserving learning, and AI agent safety." data-zh="我的研究聚焦开放世界信息环境中的可靠智能，主要关注多模态社会事件检测、结构熵、隐私保护学习与人工智能智能体安全。">I study reliable intelligence for open-world information environments, with a focus on multimodal social event detection, structural entropy, privacy-preserving learning, and AI agent safety.</p>
-
-              <div class="hero-actions">
-                <a class="button button-primary" href="#selected-work">
-                  <span data-en="View research" data-zh="查看研究">View research</span>
-                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14M13 6l6 6-6 6"></path>
-                  </svg>
-                </a>
-                <a class="button button-secondary" href="https://scholar.google.com.hk/citations?user=mNw4PDEAAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">
-                  <span>Google Scholar</span>
-                  <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M14 5h5v5M10 14 19 5M19 13v6H5V5h6"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <ul class="hero-index reveal">
-              <li>
-                <span class="hero-index-number">01</span>
-                <p data-en="Open-world multimodal event understanding" data-zh="开放世界多模态事件理解">Open-world multimodal event understanding</p>
-              </li>
-              <li>
-                <span class="hero-index-number">02</span>
-                <p data-en="Structural information and graph learning" data-zh="结构信息与图学习">Structural information and graph learning</p>
-              </li>
-              <li>
-                <span class="hero-index-number">03</span>
-                <p data-en="Privacy, reliability, and agent safety" data-zh="隐私、可靠性与智能体安全">Privacy, reliability, and agent safety</p>
-              </li>
-            </ul>
-          </section>
-
-          <section class="content-section section-anchor" id="research" aria-labelledby="research-title">
-            <div class="section-heading reveal">
-              <span class="section-number" aria-hidden="true">01</span>
-              <h2 id="research-title" data-en="Research focus" data-zh="研究方向">Research focus</h2>
-              <p data-en="Methods for finding structure, meaning, and reliable decisions in evolving information streams." data-zh="面向持续演化的信息流，研究结构发现、语义理解与可靠决策方法。">Methods for finding structure, meaning, and reliable decisions in evolving information streams.</p>
-            </div>
-
-            <div class="focus-list">
-              <article class="focus-row reveal">
-                <span class="focus-index">A</span>
-                <h3 data-en="Multimodal event intelligence" data-zh="多模态事件智能">Multimodal event intelligence</h3>
-                <p data-en="Unsupervised and open-world methods that discover emerging social events from heterogeneous, rapidly changing content." data-zh="从异构、快速变化的内容中发现新兴社会事件，重点研究无监督与开放世界方法。">Unsupervised and open-world methods that discover emerging social events from heterogeneous, rapidly changing content.</p>
-              </article>
-              <article class="focus-row reveal">
-                <span class="focus-index">B</span>
-                <h3 data-en="Structural entropy &amp; graph learning" data-zh="结构熵与图学习">Structural entropy &amp; graph learning</h3>
-                <p data-en="Information-theoretic graph representations for efficient clustering, incremental learning, and complex relational data." data-zh="面向高效聚类、增量学习与复杂关系数据的信息论图表示方法。">Information-theoretic graph representations for efficient clustering, incremental learning, and complex relational data.</p>
-              </article>
-              <article class="focus-row reveal">
-                <span class="focus-index">C</span>
-                <h3 data-en="Trustworthy AI systems" data-zh="可信人工智能系统">Trustworthy AI systems</h3>
-                <p data-en="Privacy-preserving learning and verifiable safeguards for AI systems operating in sensitive or high-risk environments." data-zh="面向敏感或高风险环境中的人工智能系统，研究隐私保护学习与可验证安全机制。">Privacy-preserving learning and verifiable safeguards for AI systems operating in sensitive or high-risk environments.</p>
-              </article>
-            </div>
-          </section>
-
-          <section class="content-section news-section" aria-labelledby="news-title">
-            <div class="section-heading compact reveal">
-              <span class="section-number" aria-hidden="true">02</span>
-              <h2 id="news-title" data-en="Recent updates" data-zh="近期动态">Recent updates</h2>
-            </div>
-
-            <ol class="news-list reveal">
+              </a></li></ul>
+      </div>
+    </aside>
+    <div class="content-column">
+      <section class="content-section section-anchor about-section" id="about-me" aria-labelledby="about-title">
+        <h1 class="section-title" id="about-title" data-en="About Me" data-zh="关于我">About Me</h1>
+        <div class="about-copy">
+          <p><span data-en="Hi! I'm " data-zh="你好！我是">Hi! I'm </span><strong data-en="Zhiwei Yang (杨志伟)" data-zh="杨志伟（Zhiwei Yang）">Zhiwei Yang (杨志伟)</strong><span data-en=", at the " data-zh="，来自">, at the </span><strong><a href="https://www.iie.ac.cn/" target="_blank" rel="noopener noreferrer" data-en="Institute of Information Engineering, Chinese Academy of Sciences (IIE, CAS)" data-zh="中国科学院信息工程研究所">Institute of Information Engineering, Chinese Academy of Sciences (IIE, CAS)</a></strong><span data-en=". My research focuses on multimodal intelligence and trustworthy AI." data-zh="。我的研究主要关注多模态智能与可信人工智能。">. My research focuses on multimodal intelligence and trustworthy AI.</span></p>
+          <p data-en="My research interests include:" data-zh="具体研究方向包括：">My research interests include:</p>
+          <ul class="research-interests">
+            <li><strong data-en="Multimodal Social Event Detection" data-zh="多模态社会事件检测">Multimodal Social Event Detection</strong> <span data-en="(Unsupervised Learning, Open-world Learning, and Event Understanding)" data-zh="（无监督学习、开放世界学习与事件理解）">(Unsupervised Learning, Open-world Learning, and Event Understanding)</span></li>
+            <li><strong data-en="Structural Entropy and Graph Learning" data-zh="结构熵与图学习">Structural Entropy and Graph Learning</strong> <span data-en="(Graph Representation, Clustering, and Incremental Learning)" data-zh="（图表示、聚类与增量学习）">(Graph Representation, Clustering, and Incremental Learning)</span></li>
+            <li><strong data-en="Trustworthy AI" data-zh="可信人工智能">Trustworthy AI</strong> <span data-en="(Privacy-preserving Learning and AI Agent Safety)" data-zh="（隐私保护学习与人工智能智能体安全）">(Privacy-preserving Learning and AI Agent Safety)</span></li>
+          </ul>
+          <p class="about-contact"><span data-en="Email: " data-zh="邮箱：">Email: </span><a href="mailto:yangzhiwei@iie.ac.cn">yangzhiwei@iie.ac.cn</a></p>
+        </div>
+      </section>
+      <section class="content-section section-anchor" id="news" aria-labelledby="news-title">
+        <h2 class="section-title" id="news-title"><svg class="section-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2c1 6-6 6-5 11-2-1-3-3-3-3-2 5 0 12 7 12s10-7 6-12c0 3-2 3-2 3 2-6-1-9-3-11Z"></path></svg><span data-en="News" data-zh="近期动态">News</span></h2>
+        <div class="news-scroll"><ul class="news-list">
               <li>
                 <time datetime="2026">2026</time>
                 <p><strong>WSDM 2026</strong> <span data-en="— Label-Free Contrastive Learning for Open-World Multimodal Social Event Detection." data-zh="——无标签对比学习用于开放世界多模态社会事件检测。">— Label-Free Contrastive Learning for Open-World Multimodal Social Event Detection.</span></p>
@@ -236,238 +128,87 @@
                 <time datetime="2024">2024</time>
                 <p><strong>CIKM 2024</strong> <span data-en="— ADP-SEMEvent combines adaptive differential privacy with structural entropy minimization." data-zh="——ADP-SEMEvent 将自适应差分隐私与结构熵最小化相结合。">— ADP-SEMEvent combines adaptive differential privacy with structural entropy minimization.</span></p>
               </li>
-            </ol>
-          </section>
-
-          <section class="content-section selected-work" id="selected-work" aria-labelledby="selected-title">
-            <div class="section-heading reveal">
-              <span class="section-number" aria-hidden="true">03</span>
-              <h2 id="selected-title" data-en="Selected research" data-zh="代表性研究">Selected research</h2>
-              <p data-en="A selection spanning event intelligence, privacy-preserving graph learning, and AI agent safety." data-zh="涵盖事件智能、隐私保护图学习与人工智能智能体安全的代表性工作。">A selection spanning event intelligence, privacy-preserving graph learning, and AI agent safety.</p>
-            </div>
-
-            <div class="featured-list">
-              <article class="featured-paper reveal">
-                <a class="paper-figure" href="https://doi.org/10.1609/aaai.v39i12.33430" target="_blank" rel="noopener noreferrer" aria-label="Open HyperSED paper">
-                  <img src="assets/images/hypersed-framework.png" alt="Overview diagram of the HyperSED framework" width="934" height="1210">
+            </ul></div>
+      </section>
+      <section class="content-section section-anchor" id="selected-work" aria-labelledby="selected-title">
+        <h2 class="section-title" id="selected-title"><svg class="section-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m13 3 2.5 6.5L22 12l-6.5 2.5L13 21l-2.5-6.5L4 12l6.5-2.5L13 3ZM4 2v4M2 4h4M3 18v4M1 20h4"></path></svg><span data-en="Highlight Papers" data-zh="代表性论文">Highlight Papers</span></h2>
+        <div class="highlight-paper-list"><article class="paper-box">
+<a class="paper-figure" href="https://doi.org/10.1609/aaai.v39i12.33430" target="_blank" rel="noopener noreferrer" aria-label="Open HyperSED paper">
+                  <span class="paper-badge">AAAI 2025</span><img src="assets/images/hypersed-teaser.png" alt="Overview diagram of the HyperSED framework" width="795" height="365">
                 </a>
-                <div class="paper-copy">
-                  <p class="paper-venue">AAAI 2025</p>
-                  <h3><a href="https://doi.org/10.1609/aaai.v39i12.33430" target="_blank" rel="noopener noreferrer">Towards Effective, Efficient and Unsupervised Social Event Detection in the Hyperbolic Space</a></h3>
-                  <p class="paper-authors">Xiaoyan Yu, Yifan Wei, Shuaishuai Zhou, <strong>Zhiwei Yang</strong>, Li Sun, Hao Peng, Liehuang Zhu, Philip S. Yu</p>
-                  <p class="paper-description" data-en="HyperSED builds compact semantic anchor graphs and learns geometry-aware representations in hyperbolic space for efficient, unsupervised event discovery." data-zh="HyperSED 构建紧凑的语义锚点图，并在双曲空间中学习几何感知表示，实现高效的无监督事件发现。">HyperSED builds compact semantic anchor graphs and learns geometry-aware representations in hyperbolic space for efficient, unsupervised event discovery.</p>
-                  <div class="paper-links">
-                    <a href="https://doi.org/10.1609/aaai.v39i12.33430" target="_blank" rel="noopener noreferrer"><span data-en="Paper" data-zh="论文">Paper</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5h5v5M10 14 19 5M19 13v6H5V5h6"></path></svg></a>
-                    <a href="https://github.com/XiaoyanWork/HyperSED" target="_blank" rel="noopener noreferrer"><span data-en="Code" data-zh="代码">Code</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18-6-6 6-6M15 6l6 6-6 6"></path></svg></a>
-                  </div>
-                </div>
-              </article>
-
-              <article class="featured-paper reveal">
-                <a class="paper-figure" href="https://doi.org/10.1145/3627673.3679537" target="_blank" rel="noopener noreferrer" aria-label="Open ADP-SEMEvent paper">
-                  <img src="assets/images/adp-sem-framework.png" alt="Overview diagram of the ADP-SEMEvent framework" width="934" height="1210">
+<div class="paper-copy"><h3><a href="https://doi.org/10.1609/aaai.v39i12.33430" target="_blank" rel="noopener noreferrer">Towards Effective, Efficient and Unsupervised Social Event Detection in the Hyperbolic Space</a></h3><p>Xiaoyan Yu, Yifan Wei, Shuaishuai Zhou, <strong class="self-author">Zhiwei Yang</strong>, Li Sun, Hao Peng, Liehuang Zhu, Philip S. Yu.</p><p class="paper-venue">Proceedings of the AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>), 2025.</p><div class="paper-links">
+                    <a class="resource-link" href="https://doi.org/10.1609/aaai.v39i12.33430" target="_blank" rel="noopener noreferrer"><span data-en="Paper" data-zh="论文">Paper</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5h5v5M10 14 19 5M19 13v6H5V5h6"></path></svg></a>
+                    <a class="resource-link" href="https://github.com/XiaoyanWork/HyperSED" target="_blank" rel="noopener noreferrer"><span data-en="Code" data-zh="代码">Code</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18-6-6 6-6M15 6l6 6-6 6"></path></svg></a>
+                  </div></div>
+</article>
+<article class="paper-box">
+<a class="paper-figure" href="https://doi.org/10.1145/3627673.3679537" target="_blank" rel="noopener noreferrer" aria-label="Open ADP-SEMEvent paper">
+                  <span class="paper-badge">CIKM 2024</span><img src="assets/images/adp-sem-teaser.png" alt="Overview diagram of the ADP-SEMEvent framework" width="792" height="332">
                 </a>
-                <div class="paper-copy">
-                  <p class="paper-venue">CIKM 2024</p>
-                  <h3><a href="https://doi.org/10.1145/3627673.3679537" target="_blank" rel="noopener noreferrer">Adaptive Differentially Private Structural Entropy Minimization for Unsupervised Social Event Detection</a></h3>
-                  <p class="paper-authors"><strong>Zhiwei Yang</strong>, Yuecen Wei, Haoran Li, Qian Li, Lei Jiang, Li Sun, Xiaoyan Yu, Chunming Hu, Hao Peng</p>
-                  <p class="paper-description" data-en="ADP-SEMEvent uses adaptive differential privacy and structural entropy minimization to detect events while protecting sensitive information in social messages." data-zh="ADP-SEMEvent 结合自适应差分隐私与结构熵最小化，在检测社会事件的同时保护消息中的敏感信息。">ADP-SEMEvent uses adaptive differential privacy and structural entropy minimization to detect events while protecting sensitive information in social messages.</p>
-                  <div class="paper-links">
-                    <a href="https://doi.org/10.1145/3627673.3679537" target="_blank" rel="noopener noreferrer"><span data-en="Paper" data-zh="论文">Paper</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5h5v5M10 14 19 5M19 13v6H5V5h6"></path></svg></a>
-                    <a href="https://github.com/SELGroup/ADP-SEMEvent" target="_blank" rel="noopener noreferrer"><span data-en="Code" data-zh="代码">Code</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18-6-6 6-6M15 6l6 6-6 6"></path></svg></a>
-                  </div>
-                </div>
-              </article>
-
-              <article class="featured-paper reveal">
-                <a class="paper-figure" href="https://arxiv.org/abs/2607.21642" target="_blank" rel="noopener noreferrer" aria-label="Open CARE paper">
-                  <img src="assets/images/care-framework.png" alt="Overview diagram of the CARE command verification pipeline" width="934" height="1210">
+<div class="paper-copy"><h3><a href="https://doi.org/10.1145/3627673.3679537" target="_blank" rel="noopener noreferrer">Adaptive Differentially Private Structural Entropy Minimization for Unsupervised Social Event Detection</a></h3><p><strong class="self-author">Zhiwei Yang</strong>, Yuecen Wei, Haoran Li, Qian Li, Lei Jiang, Li Sun, Xiaoyan Yu, Chunming Hu, Hao Peng.</p><p class="paper-venue">ACM International Conference on Information and Knowledge Management (<strong>CIKM</strong>), 2024.</p><div class="paper-links">
+                    <a class="resource-link" href="https://doi.org/10.1145/3627673.3679537" target="_blank" rel="noopener noreferrer"><span data-en="Paper" data-zh="论文">Paper</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5h5v5M10 14 19 5M19 13v6H5V5h6"></path></svg></a>
+                    <a class="resource-link" href="https://github.com/SELGroup/ADP-SEMEvent" target="_blank" rel="noopener noreferrer"><span data-en="Code" data-zh="代码">Code</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18-6-6 6-6M15 6l6 6-6 6"></path></svg></a>
+                  </div></div>
+</article>
+<article class="paper-box">
+<a class="paper-figure" href="https://arxiv.org/abs/2607.21642" target="_blank" rel="noopener noreferrer" aria-label="Open CARE paper">
+                  <span class="paper-badge">arXiv 2026</span><img src="assets/images/care-teaser.png" alt="Overview diagram of the CARE command verification pipeline" width="775" height="341">
                 </a>
-                <div class="paper-copy">
-                  <p class="paper-venue">arXiv 2026</p>
-                  <h3><a href="https://arxiv.org/abs/2607.21642" target="_blank" rel="noopener noreferrer">CARE: Pre-Execution Command Verification for Shell-Executing LLM Agents</a></h3>
-                  <p class="paper-authors">Yu Liu, Wenxiao Zhang, <strong>Zhiwei Yang</strong>, Zhongyi Zhang, Hanqi Feng, Xinyu Wang, Peng Qiu, Yanbing Liu, Barnabás Póczos, Jin B. Hong</p>
-                  <p class="paper-description" data-en="CARE is a shell-specific, static-first verifier that canonicalizes commands, builds deterministic evidence, and escalates only uncertain cases to an LLM judge." data-zh="CARE 是面向 Shell 的静态优先验证器，对命令进行规范化并生成确定性证据，仅将不确定案例升级给大模型判定。">CARE is a shell-specific, static-first verifier that canonicalizes commands, builds deterministic evidence, and escalates only uncertain cases to an LLM judge.</p>
-                  <div class="paper-links">
-                    <a href="https://arxiv.org/abs/2607.21642" target="_blank" rel="noopener noreferrer"><span data-en="Paper" data-zh="论文">Paper</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5h5v5M10 14 19 5M19 13v6H5V5h6"></path></svg></a>
-                    <a href="https://github.com/prisma-research/CARE" target="_blank" rel="noopener noreferrer"><span data-en="Code" data-zh="代码">Code</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18-6-6 6-6M15 6l6 6-6 6"></path></svg></a>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </section>
-
-          <section class="content-section publications-section section-anchor" id="publications" aria-labelledby="publications-title">
-            <div class="section-heading reveal">
-              <span class="section-number" aria-hidden="true">04</span>
-              <h2 id="publications-title" data-en="Publications" data-zh="论文列表">Publications</h2>
-              <p data-en="Publication metadata is based on the public Google Scholar profile and publisher records." data-zh="论文元数据整理自公开的 Google Scholar 主页与出版方记录。">Publication metadata is based on the public Google Scholar profile and publisher records.</p>
-            </div>
-
-            <div class="publication-toolbar reveal">
-              <div class="publication-filters" role="group" aria-label="Filter publications by year">
-                <button type="button" class="filter-button is-active" data-filter="all" aria-pressed="true" data-en="All" data-zh="全部">All</button>
+<div class="paper-copy"><h3><a href="https://arxiv.org/abs/2607.21642" target="_blank" rel="noopener noreferrer">CARE: Pre-Execution Command Verification for Shell-Executing LLM Agents</a></h3><p>Yu Liu, Wenxiao Zhang, <strong class="self-author">Zhiwei Yang</strong>, Zhongyi Zhang, Hanqi Feng, Xinyu Wang, Peng Qiu, Yanbing Liu, Barnabás Póczos, Jin B. Hong.</p><p class="paper-venue">arXiv preprint arXiv:2607.21642, 2026.</p><div class="paper-links">
+                    <a class="resource-link" href="https://arxiv.org/abs/2607.21642" target="_blank" rel="noopener noreferrer"><span data-en="Paper" data-zh="论文">Paper</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5h5v5M10 14 19 5M19 13v6H5V5h6"></path></svg></a>
+                    <a class="resource-link" href="https://github.com/prisma-research/CARE" target="_blank" rel="noopener noreferrer"><span data-en="Code" data-zh="代码">Code</span><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18-6-6 6-6M15 6l6 6-6 6"></path></svg></a>
+                  </div></div>
+</article></div>
+      </section>
+      <section class="content-section section-anchor" id="publications" aria-labelledby="publications-title">
+        <h2 class="section-title" id="publications-title"><svg class="section-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-8M16 2l6 6-10 10H6v-6L16 2Z"></path></svg><span data-en="Publications" data-zh="论文列表">Publications</span></h2>
+        <div class="publication-toolbar">
+          <div class="publication-filters" role="group" aria-label="Filter publications by year"><span class="filter-label" data-en="Year" data-zh="年份">Year</span>
+                <button type="button" class="filter-button is-active" data-filter="all" aria-pressed="true" data-en="All Publications" data-zh="全部论文">All Publications</button>
                 <button type="button" class="filter-button" data-filter="2026" aria-pressed="false">2026</button>
                 <button type="button" class="filter-button" data-filter="2025" aria-pressed="false">2025</button>
                 <button type="button" class="filter-button" data-filter="2024" aria-pressed="false">2024</button>
                 <button type="button" class="filter-button" data-filter="2023" aria-pressed="false">2023</button>
                 <button type="button" class="filter-button" data-filter="earlier" aria-pressed="false" data-en="Earlier" data-zh="更早">Earlier</button>
               </div>
-              <p class="publication-count" aria-live="polite"><span class="count-value">12</span> <span class="count-label" data-en="works" data-zh="篇论文">works</span></p>
-            </div>
-
-            <ol class="publication-list">
-              <li class="publication-item reveal" data-year="2026">
-                <span class="publication-year">2026</span>
-                <div>
-                  <h3><a href="https://doi.org/10.1145/3773966.3777919" target="_blank" rel="noopener noreferrer">Label-Free Contrastive Learning for Open-World Multimodal Social Event Detection</a></h3>
-                  <p class="publication-authors"><strong>Z. Yang</strong>, H. Qin, H. Peng, X. Yu, L. Sun, L. Jiang</p>
-                  <p class="publication-venue">The Nineteenth ACM International Conference on Web Search and Data Mining (WSDM)</p>
-                </div>
-                <a class="publication-link" href="https://doi.org/10.1145/3773966.3777919" target="_blank" rel="noopener noreferrer" aria-label="Open publication"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5h5v5M10 14 19 5M19 13v6H5V5h6"></path></svg></a>
-              </li>
-              <li class="publication-item reveal" data-year="2026">
-                <span class="publication-year">2026</span>
-                <div>
-                  <h3><a href="https://doi.org/10.1609/aaai.v40i19.38647" target="_blank" rel="noopener noreferrer">Structural Entropy Guided Incremental Learning for Open-World Multimodal Social Event Detection</a></h3>
-                  <p class="publication-authors"><strong>Z. Yang</strong>, H. Qin, X. Yu, H. Peng, L. Jiang, L. Sun, Z. Yang</p>
-                  <p class="publication-venue">Proceedings of the AAAI Conference on Artificial Intelligence</p>
-                </div>
-                <a class="publication-link" href="https://doi.org/10.1609/aaai.v40i19.38647" target="_blank" rel="noopener noreferrer" aria-label="Open publication"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5h5v5M10 14 19 5M19 13v6H5V5h6"></path></svg></a>
-              </li>
-              <li class="publication-item reveal" data-year="2026">
-                <span class="publication-year">2026</span>
-                <div>
-                  <h3><a href="https://arxiv.org/abs/2606.15088" target="_blank" rel="noopener noreferrer">When the Same Musical Knowledge Forgets Differently: A Clean Probe of Pathway-Dependent Forgetting</a></h3>
-                  <p class="publication-authors">Y. Liu, <strong>Z. Yang</strong>, W. Zhang, C. Cao, F. Yuan, K. Peng, H. Qin, L. Jiang, J. B. Hong, et al.</p>
-                  <p class="publication-venue">arXiv preprint arXiv:2606.15088</p>
-                </div>
-                <a class="publication-link" href="https://arxiv.org/abs/2606.15088" target="_blank" rel="noopener noreferrer" aria-label="Open publication"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5h5v5M10 14 19 5M19 13v6H5V5h6"></path></svg></a>
-              </li>
-              <li class="publication-item reveal" data-year="2026">
-                <span class="publication-year">2026</span>
-                <div>
-                  <h3><a href="https://arxiv.org/abs/2607.21642" target="_blank" rel="noopener noreferrer">CARE: Pre-Execution Command Verification for Shell-Executing LLM Agents</a></h3>
-                  <p class="publication-authors">Y. Liu, W. Zhang, <strong>Z. Yang</strong>, Z. Zhang, H. Feng, X. Wang, P. Qiu, Y. Liu, et al.</p>
-                  <p class="publication-venue">arXiv preprint arXiv:2607.21642</p>
-                </div>
-                <a class="publication-link" href="https://arxiv.org/abs/2607.21642" target="_blank" rel="noopener noreferrer" aria-label="Open publication"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5h5v5M10 14 19 5M19 13v6H5V5h6"></path></svg></a>
-              </li>
-              <li class="publication-item reveal" data-year="2025">
-                <span class="publication-year">2025</span>
-                <div>
-                  <h3><a href="https://doi.org/10.1609/aaai.v39i12.33430" target="_blank" rel="noopener noreferrer">Towards Effective, Efficient and Unsupervised Social Event Detection in the Hyperbolic Space</a></h3>
-                  <p class="publication-authors">X. Yu, Y. Wei, S. Zhou, <strong>Z. Yang</strong>, L. Sun, H. Peng, L. Zhu, P. S. Yu</p>
-                  <p class="publication-venue">Proceedings of the AAAI Conference on Artificial Intelligence</p>
-                </div>
-                <a class="publication-link" href="https://doi.org/10.1609/aaai.v39i12.33430" target="_blank" rel="noopener noreferrer" aria-label="Open publication"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5h5v5M10 14 19 5M19 13v6H5V5h6"></path></svg></a>
-              </li>
-              <li class="publication-item reveal" data-year="2024">
-                <span class="publication-year">2024</span>
-                <div>
-                  <h3><a href="https://doi.org/10.1145/3627673.3679537" target="_blank" rel="noopener noreferrer">Adaptive Differentially Private Structural Entropy Minimization for Unsupervised Social Event Detection</a></h3>
-                  <p class="publication-authors"><strong>Z. Yang</strong>, Y. Wei, H. Li, Q. Li, L. Jiang, L. Sun, X. Yu, C. Hu, H. Peng</p>
-                  <p class="publication-venue">The 33rd ACM International Conference on Information and Knowledge Management (CIKM)</p>
-                </div>
-                <a class="publication-link" href="https://doi.org/10.1145/3627673.3679537" target="_blank" rel="noopener noreferrer" aria-label="Open publication"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5h5v5M10 14 19 5M19 13v6H5V5h6"></path></svg></a>
-              </li>
-              <li class="publication-item reveal" data-year="2024">
-                <span class="publication-year">2024</span>
-                <div>
-                  <h3><a href="https://doi.org/10.1109/HPCC64274.2024.00148" target="_blank" rel="noopener noreferrer">GenHMD: Enhancing Hateful Meme Detection with Generated Rationale from Multimodal Large Language Models</a></h3>
-                  <p class="publication-authors">H. Qin, <strong>Z. Yang</strong>, C. Tong, L. Jiang</p>
-                  <p class="publication-venue">IEEE International Conference on High Performance Computing and Communications (HPCC)</p>
-                </div>
-                <a class="publication-link" href="https://doi.org/10.1109/HPCC64274.2024.00148" target="_blank" rel="noopener noreferrer" aria-label="Open publication"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5h5v5M10 14 19 5M19 13v6H5V5h6"></path></svg></a>
-              </li>
-              <li class="publication-item reveal" data-year="2024">
-                <span class="publication-year">2024</span>
-                <div>
-                  <h3><a href="https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=mNw4PDEAAAAJ&citation_for_view=mNw4PDEAAAAJ:d1gkVwhDpl0C" target="_blank" rel="noopener noreferrer">An FTwNB Shield: A Credit Risk Assessment Model for Data Uncertainty and Privacy Protection</a></h3>
-                  <p class="publication-authors">S. Hua, C. Zhang, G. Yang, J. Fu, <strong>Z. Yang</strong>, L. Wang, J. Ren</p>
-                  <p class="publication-venue">Mathematics, 12(11), 1695</p>
-                </div>
-                <a class="publication-link" href="https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=mNw4PDEAAAAJ&citation_for_view=mNw4PDEAAAAJ:d1gkVwhDpl0C" target="_blank" rel="noopener noreferrer" aria-label="Open publication"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5h5v5M10 14 19 5M19 13v6H5V5h6"></path></svg></a>
-              </li>
-              <li class="publication-item reveal" data-year="2023">
-                <span class="publication-year">2023</span>
-                <div>
-                  <h3><a href="https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=mNw4PDEAAAAJ&citation_for_view=mNw4PDEAAAAJ:u-x6o8ySG0sC" target="_blank" rel="noopener noreferrer">A New Three-Way Incremental Naive Bayes Classifier</a></h3>
-                  <p class="publication-authors"><strong>Z. Yang</strong>, J. Ren, Z. Zhang, Y. Sun, C. Zhang, M. Wang, L. Wang</p>
-                  <p class="publication-venue">Electronics, 12(7), 1730</p>
-                </div>
-                <a class="publication-link" href="https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=mNw4PDEAAAAJ&citation_for_view=mNw4PDEAAAAJ:u-x6o8ySG0sC" target="_blank" rel="noopener noreferrer" aria-label="Open publication"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5h5v5M10 14 19 5M19 13v6H5V5h6"></path></svg></a>
-              </li>
-              <li class="publication-item reveal" data-year="2023">
-                <span class="publication-year">2023</span>
-                <div>
-                  <h3><a href="https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=mNw4PDEAAAAJ&citation_for_view=mNw4PDEAAAAJ:2osOgNQ5qMEC" target="_blank" rel="noopener noreferrer">Study on the Decoupling and Interaction Effect Between Industrial Structure Upgrading and Carbon Emissions Under Dual Carbon Targets</a></h3>
-                  <p class="publication-authors">Y. Sun, Y. Liu, <strong>Z. Yang</strong>, M. Wang, C. Zhang, L. Wang</p>
-                  <p class="publication-venue">International Journal of Environmental Research and Public Health, 20(3), 1945</p>
-                </div>
-                <a class="publication-link" href="https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=mNw4PDEAAAAJ&citation_for_view=mNw4PDEAAAAJ:2osOgNQ5qMEC" target="_blank" rel="noopener noreferrer" aria-label="Open publication"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5h5v5M10 14 19 5M19 13v6H5V5h6"></path></svg></a>
-              </li>
-              <li class="publication-item reveal" data-year="2023">
-                <span class="publication-year">2023</span>
-                <div>
-                  <h3><a href="https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=mNw4PDEAAAAJ&citation_for_view=mNw4PDEAAAAJ:qjMakFHDy7sC" target="_blank" rel="noopener noreferrer">基于优化随机森林的软件缺陷预测算法研究</a></h3>
-                  <p class="publication-authors">唐宇，代琪，<strong>杨志伟</strong>，杨爱民，陈丽芳</p>
-                  <p class="publication-venue">计算机工程与科学, 45(5), 830</p>
-                </div>
-                <a class="publication-link" href="https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=mNw4PDEAAAAJ&citation_for_view=mNw4PDEAAAAJ:qjMakFHDy7sC" target="_blank" rel="noopener noreferrer" aria-label="Open publication"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5h5v5M10 14 19 5M19 13v6H5V5h6"></path></svg></a>
-              </li>
-              <li class="publication-item reveal" data-year="2022">
-                <span class="publication-year">2022</span>
-                <div>
-                  <h3><a href="https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=mNw4PDEAAAAJ&citation_for_view=mNw4PDEAAAAJ:9yKSN-GCB0IC" target="_blank" rel="noopener noreferrer">SEIARN: Intelligent Early Warning Model of Epidemic Spread Based on LSTM Trajectory Prediction</a></h3>
-                  <p class="publication-authors">L. Wang, Y. Dai, R. Wang, Y. Sun, C. Zhang, <strong>Z. Yang</strong>, Y. Sun</p>
-                  <p class="publication-venue">Mathematics, 10(17), 3046</p>
-                </div>
-                <a class="publication-link" href="https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=mNw4PDEAAAAJ&citation_for_view=mNw4PDEAAAAJ:9yKSN-GCB0IC" target="_blank" rel="noopener noreferrer" aria-label="Open publication"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 5h5v5M10 14 19 5M19 13v6H5V5h6"></path></svg></a>
-              </li>
-            </ol>
-          </section>
-
-          <section class="content-section service-section section-anchor" id="service" aria-labelledby="service-title">
-            <div class="section-heading compact reveal">
-              <span class="section-number" aria-hidden="true">05</span>
-              <h2 id="service-title" data-en="Academic service" data-zh="学术服务">Academic service</h2>
-            </div>
-            <div class="service-details reveal">
-              <h3 data-en="Conference reviewer" data-zh="会议审稿人">Conference reviewer</h3>
-              <ul class="service-venues">
-                <li>AAAI</li>
-                <li>ICLR</li>
-                <li>ACM Multimedia</li>
-              </ul>
-            </div>
-          </section>
-
-          <section class="profile-section section-anchor" id="profile" aria-labelledby="profile-title">
-            <div class="profile-section-copy reveal">
-              <span class="section-number" aria-hidden="true">06</span>
-              <h2 id="profile-title" data-en="Academic profile" data-zh="学术资料">Academic profile</h2>
-              <p data-en="For the latest publication list, citation record, and co-author network, visit the public Google Scholar profile." data-zh="最新论文列表、引用记录与合作者信息，请访问公开的 Google Scholar 主页。">For the latest publication list, citation record, and co-author network, visit the public Google Scholar profile.</p>
-            </div>
-            <a class="profile-cta reveal" href="https://scholar.google.com.hk/citations?user=mNw4PDEAAAAJ&hl=zh-CN" target="_blank" rel="noopener noreferrer">
-              <span data-en="Open Google Scholar" data-zh="打开 Google Scholar">Open Google Scholar</span>
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
-            </a>
-          </section>
+          <p class="publication-count" aria-live="polite"><span class="count-value">12</span> <span data-en="publications" data-zh="篇论文">publications</span></p>
         </div>
-      </div>
-    </main>
-
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <p>© <span class="current-year">2026</span> Zhiwei Yang</p>
-        <a href="#top">
-          <span data-en="Back to top" data-zh="返回顶部">Back to top</span>
-          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 15 6-6 6 6"></path></svg>
-        </a>
-      </div>
-    </footer>
-
-    <script src="assets/js/main.js" defer></script>
-  </body>
+        <div class="publication-group" data-year="2026"><h3 class="year-heading">2026</h3><ul class="publication-list">
+<li class="publication-item" data-year="2026"><h4><a href="https://doi.org/10.1145/3773966.3777919" target="_blank" rel="noopener noreferrer">Label-Free Contrastive Learning for Open-World Multimodal Social Event Detection</a></h4><p><strong class="self-author">Z. Yang</strong>, H. Qin, H. Peng, X. Yu, L. Sun, L. Jiang</p><p>The Nineteenth ACM International Conference on Web Search and Data Mining (WSDM)</p></li>
+<li class="publication-item" data-year="2026"><h4><a href="https://doi.org/10.1609/aaai.v40i19.38647" target="_blank" rel="noopener noreferrer">Structural Entropy Guided Incremental Learning for Open-World Multimodal Social Event Detection</a></h4><p><strong class="self-author">Z. Yang</strong>, H. Qin, X. Yu, H. Peng, L. Jiang, L. Sun, Z. Yang</p><p>Proceedings of the AAAI Conference on Artificial Intelligence</p></li>
+<li class="publication-item" data-year="2026"><h4><a href="https://arxiv.org/abs/2606.15088" target="_blank" rel="noopener noreferrer">When the Same Musical Knowledge Forgets Differently: A Clean Probe of Pathway-Dependent Forgetting</a></h4><p>Y. Liu, <strong class="self-author">Z. Yang</strong>, W. Zhang, C. Cao, F. Yuan, K. Peng, H. Qin, L. Jiang, J. B. Hong, et al.</p><p>arXiv preprint arXiv:2606.15088</p></li>
+<li class="publication-item" data-year="2026"><h4><a href="https://arxiv.org/abs/2607.21642" target="_blank" rel="noopener noreferrer">CARE: Pre-Execution Command Verification for Shell-Executing LLM Agents</a></h4><p>Y. Liu, W. Zhang, <strong class="self-author">Z. Yang</strong>, Z. Zhang, H. Feng, X. Wang, P. Qiu, Y. Liu, et al.</p><p>arXiv preprint arXiv:2607.21642</p></li>
+</ul></div>
+<div class="publication-group" data-year="2025"><h3 class="year-heading">2025</h3><ul class="publication-list">
+<li class="publication-item" data-year="2025"><h4><a href="https://doi.org/10.1609/aaai.v39i12.33430" target="_blank" rel="noopener noreferrer">Towards Effective, Efficient and Unsupervised Social Event Detection in the Hyperbolic Space</a></h4><p>X. Yu, Y. Wei, S. Zhou, <strong class="self-author">Z. Yang</strong>, L. Sun, H. Peng, L. Zhu, P. S. Yu</p><p>Proceedings of the AAAI Conference on Artificial Intelligence</p></li>
+</ul></div>
+<div class="publication-group" data-year="2024"><h3 class="year-heading">2024</h3><ul class="publication-list">
+<li class="publication-item" data-year="2024"><h4><a href="https://doi.org/10.1145/3627673.3679537" target="_blank" rel="noopener noreferrer">Adaptive Differentially Private Structural Entropy Minimization for Unsupervised Social Event Detection</a></h4><p><strong class="self-author">Z. Yang</strong>, Y. Wei, H. Li, Q. Li, L. Jiang, L. Sun, X. Yu, C. Hu, H. Peng</p><p>The 33rd ACM International Conference on Information and Knowledge Management (CIKM)</p></li>
+<li class="publication-item" data-year="2024"><h4><a href="https://doi.org/10.1109/HPCC64274.2024.00148" target="_blank" rel="noopener noreferrer">GenHMD: Enhancing Hateful Meme Detection with Generated Rationale from Multimodal Large Language Models</a></h4><p>H. Qin, <strong class="self-author">Z. Yang</strong>, C. Tong, L. Jiang</p><p>IEEE International Conference on High Performance Computing and Communications (HPCC)</p></li>
+<li class="publication-item" data-year="2024"><h4><a href="https://scholar.google.com.hk/citations?view_op=view_citation&amp;hl=zh-CN&amp;user=mNw4PDEAAAAJ&amp;citation_for_view=mNw4PDEAAAAJ:d1gkVwhDpl0C" target="_blank" rel="noopener noreferrer">An FTwNB Shield: A Credit Risk Assessment Model for Data Uncertainty and Privacy Protection</a></h4><p>S. Hua, C. Zhang, G. Yang, J. Fu, <strong class="self-author">Z. Yang</strong>, L. Wang, J. Ren</p><p>Mathematics, 12(11), 1695</p></li>
+</ul></div>
+<div class="publication-group" data-year="2023"><h3 class="year-heading">2023</h3><ul class="publication-list">
+<li class="publication-item" data-year="2023"><h4><a href="https://scholar.google.com.hk/citations?view_op=view_citation&amp;hl=zh-CN&amp;user=mNw4PDEAAAAJ&amp;citation_for_view=mNw4PDEAAAAJ:u-x6o8ySG0sC" target="_blank" rel="noopener noreferrer">A New Three-Way Incremental Naive Bayes Classifier</a></h4><p><strong class="self-author">Z. Yang</strong>, J. Ren, Z. Zhang, Y. Sun, C. Zhang, M. Wang, L. Wang</p><p>Electronics, 12(7), 1730</p></li>
+<li class="publication-item" data-year="2023"><h4><a href="https://scholar.google.com.hk/citations?view_op=view_citation&amp;hl=zh-CN&amp;user=mNw4PDEAAAAJ&amp;citation_for_view=mNw4PDEAAAAJ:2osOgNQ5qMEC" target="_blank" rel="noopener noreferrer">Study on the Decoupling and Interaction Effect Between Industrial Structure Upgrading and Carbon Emissions Under Dual Carbon Targets</a></h4><p>Y. Sun, Y. Liu, <strong class="self-author">Z. Yang</strong>, M. Wang, C. Zhang, L. Wang</p><p>International Journal of Environmental Research and Public Health, 20(3), 1945</p></li>
+<li class="publication-item" data-year="2023"><h4><a href="https://scholar.google.com.hk/citations?view_op=view_citation&amp;hl=zh-CN&amp;user=mNw4PDEAAAAJ&amp;citation_for_view=mNw4PDEAAAAJ:qjMakFHDy7sC" target="_blank" rel="noopener noreferrer">基于优化随机森林的软件缺陷预测算法研究</a></h4><p>唐宇，代琪，<strong class="self-author">杨志伟</strong>，杨爱民，陈丽芳</p><p>计算机工程与科学, 45(5), 830</p></li>
+</ul></div>
+<div class="publication-group" data-year="2022"><h3 class="year-heading">2022</h3><ul class="publication-list">
+<li class="publication-item" data-year="2022"><h4><a href="https://scholar.google.com.hk/citations?view_op=view_citation&amp;hl=zh-CN&amp;user=mNw4PDEAAAAJ&amp;citation_for_view=mNw4PDEAAAAJ:9yKSN-GCB0IC" target="_blank" rel="noopener noreferrer">SEIARN: Intelligent Early Warning Model of Epidemic Spread Based on LSTM Trajectory Prediction</a></h4><p>L. Wang, Y. Dai, R. Wang, Y. Sun, C. Zhang, <strong class="self-author">Z. Yang</strong>, Y. Sun</p><p>Mathematics, 10(17), 3046</p></li>
+</ul></div>
+        <p class="scholar-note"><span data-en="See also: " data-zh="更多学术资料：">See also: </span><a href="https://scholar.google.com.hk/citations?user=mNw4PDEAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener noreferrer">Google Scholar</a> · <a href="https://dblp.org/pid/78/8054-9" target="_blank" rel="noopener noreferrer">DBLP</a></p>
+      </section>
+      <section class="content-section section-anchor" id="service" aria-labelledby="service-title">
+        <h2 class="section-title" id="service-title"><svg class="section-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5C8 2 4 2 2 3v16c3-1 7-1 10 2 3-3 7-3 10-2V3c-2-1-6-1-10 2Zm0 0v16"></path></svg><span data-en="Services" data-zh="学术服务">Services</span></h2>
+        <h3 class="service-subheading" data-en="Conference Reviewer" data-zh="会议审稿人">Conference Reviewer</h3>
+        <ul class="service-list">
+          <li><strong>AAAI</strong><span data-en=" — Reviewer" data-zh=" —— 审稿人"> — Reviewer</span></li>
+          <li><strong>ICLR</strong><span data-en=" — Reviewer" data-zh=" —— 审稿人"> — Reviewer</span></li>
+          <li><strong>ACM Multimedia</strong><span data-en=" — Reviewer" data-zh=" —— 审稿人"> — Reviewer</span></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="footer-inner"><p>© <span class="current-year">2026</span> Zhiwei Yang</p><a href="#top" data-en="Back to top ↑" data-zh="返回顶部 ↑">Back to top ↑</a></div></footer>
+  <script src="assets/js/main.js?v=20261016-academic" defer></script>
+</body>
 </html>

@@ -2,7 +2,9 @@
 
 面向 GitHub Pages 的纯静态个人主页，无需安装 Node.js、配置数据库或购买服务器。支持中英文切换、深浅主题、论文年份筛选和手机导航。
 
-站点地址：**https://yzw66.github.io/**。首次发布需要将文件上传到同名仓库并启用 GitHub Pages，操作流程见下方。
+站点地址：**https://yzw66.github.io/**。已配置从 `main` 分支根目录发布，推送更新后 GitHub Pages 会自动部署。
+
+页面参照 [statusrank.github.io](https://statusrank.github.io/) 的布局与视觉风格：紧凑导航、左侧资料栏、About Me、News、图文代表论文、按年份分组的论文列表和学术服务。默认深蓝主题，支持切换白底浅色主题。内容为杨志伟本人的资料，不包含参考站作者的经历与成果。
 
 ## 本地预览
 
@@ -40,7 +42,7 @@ git push -u origin main
 - GitHub：https://github.com/yzw66。
 - DBLP：https://dblp.org/pid/78/8054-9（按本人提供的链接使用）。
 - 学术服务：AAAI、ICLR、ACM Multimedia 审稿人；未添加未经确认的年份。
-- 照片：按当前偏好保留 `ZY` 姓名字标，无需照片。
+- 照片：按当前偏好不展示照片，侧栏直接显示姓名与联系方式。
 
 教育、工作经历、奖项、ORCID 和 CV 暂不展示，可后续添加。尚未填入正式职务；审稿经历单独列在学术服务中。
 
@@ -53,7 +55,7 @@ git push -u origin main
 - `assets/js/main.js`：语言、主题、手机菜单和论文筛选。
 - `assets/images/`：论文配图。
 
-论文与动态为静态内容，不会自动从 Google Scholar 更新。增加论文时，将条目加到 `.publication-list`，填写 `data-year`；新增年份还需添加对应的筛选按钮。修改并推送 `main` 后，Pages 会自动重新部署。
+论文与动态为静态内容，不会自动从 Google Scholar 更新。增加论文时，将条目加到对应 `.publication-group` 下的 `.publication-list`，填写 `data-year`；新增年份还需添加年份分组和对应的筛选按钮。修改并推送 `main` 后，Pages 会自动重新部署。
 
 ## 内容来源
 
@@ -61,4 +63,4 @@ git push -u origin main
 
 - [Google Scholar](https://scholar.google.com.hk/citations?user=mNw4PDEAAAAJ&hl=zh-CN) 公开资料与各论文的出版页面。
 - 本人提供的 GitHub、邮箱、DBLP 和审稿服务信息。
-- 论文配图来自作者公开 PDF 的页面渲染，点击图片可访问对应论文。
+- 论文配图从作者公开 PDF 中裁出方法图（`*-teaser.png`），保留原始页面图片供后续维护；点击配图可访问对应论文。

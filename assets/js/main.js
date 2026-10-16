@@ -2,165 +2,128 @@
   const root = document.documentElement;
   const header = document.querySelector('.site-header');
   const menuToggle = document.querySelector('.menu-toggle');
-  const themeToggle = document.querySelector('.theme-toggle');
   const languageToggle = document.querySelector('.language-toggle');
+  const themeToggle = document.querySelector('.theme-toggle');
+  const themeLabel = document.querySelector('.theme-label');
   const themeColor = document.querySelector('meta[name="theme-color"]');
   const navLinks = [...document.querySelectorAll('.primary-nav a')];
   const filterButtons = [...document.querySelectorAll('.filter-button')];
-  const publications = [...document.querySelectorAll('.publication-item')];
-  const countValue = document.querySelector('.count-value');
-  let activeFilter = 'all';
+  const groups = [...document.querySelectorAll('.publication-group')];
+  const papers = [...document.querySelectorAll('.publication-item')];
+  const sections = [...document.querySelectorAll('.section-anchor')];
+  const language = () => root.dataset.language === 'zh' ? 'zh' : 'en';
 
   const persist = (key, value) => {
-    try {
-      localStorage.setItem(key, value);
-    } catch (error) {
-      // The preference still applies for the current page view.
-    }
+    try { localStorage.setItem(key, value); } catch (error) { /* Preferences still work for this visit. */ }
   };
 
-  const currentLanguage = () => root.dataset.language === 'zh' ? 'zh' : 'en';
-
-  const updateControlLabels = () => {
-    const language = currentLanguage();
-    const isDark = root.dataset.theme === 'dark';
-    themeToggle.setAttribute(
-      'aria-label',
-      language === 'zh'
-        ? (isDark ? '切换到浅色主题' : '切换到深色主题')
-        : (isDark ? 'Switch to light theme' : 'Switch to dark theme')
-    );
-    menuToggle.setAttribute(
-      'aria-label',
-      language === 'zh'
-        ? (header.classList.contains('menu-open') ? '关闭导航' : '打开导航')
-        : (header.classList.contains('menu-open') ? 'Close navigation' : 'Open navigation')
-    );
+  const updateControls = () => {
+    const chinese = language() === 'zh';
+    const dark = root.dataset.theme === 'dark';
+    const menuOpen = header.classList.contains('menu-open');
+    languageToggle.textContent = chinese ? 'EN' : '中文';
+    languageToggle.setAttribute('aria-label', chinese ? 'Switch to English' : '切换到中文');
+    themeLabel.textContent = chinese ? (dark ? '浅色' : '深色') : (dark ? 'Light' : 'Dark');
+    themeToggle.setAttribute('aria-label', chinese ? (dark ? '切换到浅色主题' : '切换到深色主题') : (dark ? 'Switch to light theme' : 'Switch to dark theme'));
+    themeToggle.setAttribute('aria-pressed', String(dark));
+    menuToggle.setAttribute('aria-label', chinese ? (menuOpen ? '关闭导航' : '打开导航') : (menuOpen ? 'Close navigation' : 'Open navigation'));
+    menuToggle.setAttribute('aria-expanded', String(menuOpen));
   };
 
   const setTheme = (theme, save = true) => {
-    const nextTheme = theme === 'light' ? 'light' : 'dark';
-    root.dataset.theme = nextTheme;
-    themeColor.setAttribute('content', nextTheme === 'dark' ? '#0b0e12' : '#ffffff');
-    if (save) persist('site-theme', nextTheme);
-    updateControlLabels();
+    root.dataset.theme = theme === 'light' ? 'light' : 'dark';
+    themeColor.setAttribute('content', root.dataset.theme === 'dark' ? '#0b1020' : '#ffffff');
+    if (save) persist('site-theme', root.dataset.theme);
+    updateControls();
   };
 
-  const updatePublicationCount = () => {
-    const visibleCount = publications.filter((item) => !item.hidden).length;
-    countValue.textContent = String(visibleCount);
-  };
-
-  const setLanguage = (language, save = true) => {
-    const nextLanguage = language === 'zh' ? 'zh' : 'en';
-    root.dataset.language = nextLanguage;
-    root.lang = nextLanguage === 'zh' ? 'zh-CN' : 'en';
-
-    document.querySelectorAll('[data-en][data-zh]').forEach((element) => {
-      element.textContent = element.dataset[nextLanguage];
+  const setLanguage = (next, save = true) => {
+    root.dataset.language = next === 'zh' ? 'zh' : 'en';
+    root.lang = language() === 'zh' ? 'zh-CN' : 'en';
+    document.querySelectorAll('[data-en][data-zh]').forEach((node) => {
+      node.textContent = node.dataset[language()];
     });
-
-    languageToggle.textContent = nextLanguage === 'en' ? '中文' : 'EN';
-    languageToggle.setAttribute(
-      'aria-label',
-      nextLanguage === 'en' ? '切换到中文' : 'Switch to English'
-    );
-    document.title = nextLanguage === 'zh'
-      ? '杨志伟 | 学术主页'
-      : 'Zhiwei Yang | Academic Homepage';
-
-    if (save) persist('site-language', nextLanguage);
-    updateControlLabels();
-    updatePublicationCount();
+    document.title = language() === 'zh' ? '杨志伟 | 学术主页' : 'Zhiwei Yang | Academic Homepage';
+    if (save) persist('site-language', language());
+    updateControls();
   };
 
   const closeMenu = () => {
     header.classList.remove('menu-open');
-    menuToggle.setAttribute('aria-expanded', 'false');
-    updateControlLabels();
+    updateControls();
+  };
+
+  const updateActiveSection = () => {
+    const threshold = header.getBoundingClientRect().height + 95;
+    const atBottom = scrollY > 0 && innerHeight + scrollY >= document.documentElement.scrollHeight - 2;
+    const current = atBottom ? sections[sections.length - 1].id : sections.reduce((active, section) => section.getBoundingClientRect().top <= threshold ? section.id : active, 'about-me');
+    const target = current === 'selected-work' ? 'publications' : current;
+    navLinks.forEach((link) => {
+      const active = link.dataset.section === target;
+      link.classList.toggle('is-active', active);
+      if (active) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
   };
 
   const applyFilter = (filter) => {
-    activeFilter = filter;
     filterButtons.forEach((button) => {
-      const selected = button.dataset.filter === filter;
-      button.classList.toggle('is-active', selected);
-      button.setAttribute('aria-pressed', String(selected));
+      const active = button.dataset.filter === filter;
+      button.classList.toggle('is-active', active);
+      button.setAttribute('aria-pressed', String(active));
     });
-
-    publications.forEach((item) => {
-      const year = Number(item.dataset.year);
-      const visible = filter === 'all'
-        || item.dataset.year === filter
-        || (filter === 'earlier' && year < 2023);
-      item.hidden = !visible;
+    papers.forEach((paper) => {
+      paper.hidden = !(filter === 'all' || paper.dataset.year === filter || (filter === 'earlier' && Number(paper.dataset.year) < 2023));
     });
-
-    updatePublicationCount();
+    groups.forEach((group) => {
+      group.hidden = ![...group.querySelectorAll('.publication-item')].some((paper) => !paper.hidden);
+    });
+    document.querySelector('.count-value').textContent = String(papers.filter((paper) => !paper.hidden).length);
+    updateActiveSection();
   };
 
-  themeToggle.addEventListener('click', () => {
-    setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark');
-  });
-
-  languageToggle.addEventListener('click', () => {
-    setLanguage(currentLanguage() === 'en' ? 'zh' : 'en');
-  });
-
+  languageToggle.addEventListener('click', () => setLanguage(language() === 'en' ? 'zh' : 'en'));
+  themeToggle.addEventListener('click', () => setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
   menuToggle.addEventListener('click', () => {
-    const isOpen = header.classList.toggle('menu-open');
-    menuToggle.setAttribute('aria-expanded', String(isOpen));
-    updateControlLabels();
+    header.classList.toggle('menu-open');
+    updateControls();
   });
-
-  navLinks.forEach((link) => {
-    link.addEventListener('click', closeMenu);
-  });
-
-  filterButtons.forEach((button) => {
-    button.addEventListener('click', () => applyFilter(button.dataset.filter));
-  });
-
+  navLinks.forEach((link) => link.addEventListener('click', closeMenu));
+  document.querySelector('.home-link').addEventListener('click', closeMenu);
+  filterButtons.forEach((button) => button.addEventListener('click', () => applyFilter(button.dataset.filter)));
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') closeMenu();
+    if (event.key === 'Escape' && header.classList.contains('menu-open')) {
+      closeMenu();
+      menuToggle.focus();
+    }
   });
+  document.addEventListener('click', (event) => {
+    if (!header.contains(event.target)) closeMenu();
+  });
+  window.matchMedia('(min-width: 641px)').addEventListener('change', closeMenu);
+  let scheduled = false;
+  window.addEventListener('scroll', () => {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(() => {
+      updateActiveSection();
+      scheduled = false;
+    });
+  }, { passive: true });
 
-  const revealElements = [...document.querySelectorAll('.reveal')];
-  if ('IntersectionObserver' in window) {
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      });
-    }, { threshold: 0.08, rootMargin: '0px 0px -35px' });
-
-    revealElements.forEach((element) => revealObserver.observe(element));
-  } else {
-    revealElements.forEach((element) => element.classList.add('is-visible'));
-  }
-
-  const sections = [...document.querySelectorAll('.section-anchor')];
-  if ('IntersectionObserver' in window) {
-    const sectionObserver = new IntersectionObserver((entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-      if (!visible) return;
-
-      navLinks.forEach((link) => {
-        const isActive = link.dataset.section === visible.target.id;
-        link.classList.toggle('is-active', isActive);
-        if (isActive) link.setAttribute('aria-current', 'page');
-        else link.removeAttribute('aria-current');
-      });
-    }, { rootMargin: '-28% 0px -60%', threshold: [0, 0.1, 0.4] });
-
-    sections.forEach((section) => sectionObserver.observe(section));
-  }
+  // Keep incoming links from the previous homepage version working.
+  const legacySections = { '#overview': 'about-me', '#research': 'about-me', '#profile': 'about-me' };
+  const resolveLegacySection = () => {
+    const target = legacySections[location.hash];
+    if (!target) return;
+    history.replaceState(null, '', `#${target}`);
+    document.getElementById(target).scrollIntoView();
+  };
+  window.addEventListener('hashchange', resolveLegacySection);
 
   document.querySelector('.current-year').textContent = String(new Date().getFullYear());
-  applyFilter(activeFilter);
   setTheme(root.dataset.theme, false);
   setLanguage(root.dataset.language, false);
+  applyFilter('all');
+  resolveLegacySection();
 })();
