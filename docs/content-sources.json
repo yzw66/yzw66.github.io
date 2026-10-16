@@ -1,0 +1,176 @@
+{
+  "checked_on": "2026-10-16",
+  "date_policy": "Acceptance news months use the conference notification schedule; personal email dates have not been verified. Preprint news months use the first arXiv submission date, not acceptance dates.",
+  "care_note": "The actual CARE acceptance month is not public. ISSRE research decisions can be early (June 15) or final (July 8); other tracks differ. Its news item therefore records the verified July 21 arXiv release and makes no acceptance-month claim. Current accepted status in the publication card is retained.",
+  "cikm_note": "The original CIKM 2024 CFP is now a placeholder. The July 16 notification is supported by the contemporaneous CFP mailing-list archive.",
+  "news": [
+    {
+      "paper": "OmniStepBench",
+      "displayed_month": "2026-09",
+      "event_basis": "arxiv-release",
+      "reference_date": "2026-09-05",
+      "date_source": "https://arxiv.org/abs/2609.06059",
+      "paper_url": "https://arxiv.org/abs/2609.06059"
+    },
+    {
+      "paper": "NTEP-R",
+      "displayed_month": "2026-09",
+      "event_basis": "arxiv-release",
+      "reference_date": "2026-09-03",
+      "date_source": "https://arxiv.org/abs/2609.03493",
+      "paper_url": "https://arxiv.org/abs/2609.03493"
+    },
+    {
+      "paper": "ClueWeaver",
+      "displayed_month": "2026-08",
+      "event_basis": "conference-notification",
+      "reference_date": "2026-08-14",
+      "date_source": "https://iconip2026.org/news",
+      "paper_url": "https://arxiv.org/abs/2608.25531"
+    },
+    {
+      "paper": "MOF-Sleuth",
+      "displayed_month": "2026-07",
+      "event_basis": "arxiv-release",
+      "reference_date": "2026-07-22",
+      "date_source": "https://arxiv.org/abs/2607.19935",
+      "paper_url": "https://arxiv.org/abs/2607.19935"
+    },
+    {
+      "paper": "CARE",
+      "displayed_month": "2026-07",
+      "event_basis": "arxiv-release",
+      "reference_date": "2026-07-21",
+      "date_source": "https://arxiv.org/abs/2607.21642",
+      "paper_url": "https://arxiv.org/abs/2607.21642"
+    },
+    {
+      "paper": "Pathway-Dependent Forgetting",
+      "displayed_month": "2026-06",
+      "event_basis": "arxiv-release",
+      "reference_date": "2026-06-13",
+      "date_source": "https://arxiv.org/abs/2606.15088",
+      "paper_url": "https://arxiv.org/abs/2606.15088"
+    },
+    {
+      "paper": "SeInEvent",
+      "displayed_month": "2025-11",
+      "event_basis": "conference-notification",
+      "reference_date": "2025-11-08",
+      "date_source": "https://aaai.org/conference/aaai/aaai-26/review-process/",
+      "paper_url": "https://doi.org/10.1609/aaai.v40i19.38647"
+    },
+    {
+      "paper": "LFEvent",
+      "displayed_month": "2025-10",
+      "event_basis": "conference-notification",
+      "reference_date": "2025-10-23",
+      "date_source": "https://wsdm-conference.org/2026/index.php/call-for-papers/",
+      "paper_url": "https://doi.org/10.1145/3773966.3777919"
+    },
+    {
+      "paper": "HyperSED",
+      "displayed_month": "2024-12",
+      "event_basis": "conference-notification",
+      "reference_date": "2024-12-09",
+      "date_source": "https://aaai.org/conference/aaai/aaai-25/",
+      "paper_url": "https://doi.org/10.1609/aaai.v39i12.33430"
+    },
+    {
+      "paper": "ADP-SEMEvent",
+      "displayed_month": "2024-07",
+      "event_basis": "conference-notification",
+      "reference_date": "2024-07-16",
+      "date_source": "https://groups.google.com/g/ml-news/c/5YiMUz1JssM",
+      "paper_url": "https://doi.org/10.1145/3627673.3679537"
+    }
+  ],
+  "author_roles": [
+    {
+      "paper_id": "2609.06059",
+      "author": "Zhiwei Yang",
+      "role": "Co-first author",
+      "role_zh": "共同第一作者",
+      "source": "https://arxiv.org/pdf/2609.06059v2",
+      "evidence": "First-page author order and equal-contribution / corresponding-author footnotes"
+    },
+    {
+      "paper_id": "2609.03493",
+      "author": "Zhiwei Yang",
+      "role": "Co-first author",
+      "role_zh": "共同第一作者",
+      "source": "https://arxiv.org/pdf/2609.03493v1",
+      "evidence": "First-page author order and equal-contribution / corresponding-author footnotes"
+    },
+    {
+      "paper_id": "2608.25531",
+      "author": "Zhiwei Yang",
+      "role": "Co-first author",
+      "role_zh": "共同第一作者",
+      "source": "https://arxiv.org/pdf/2608.25531v2",
+      "evidence": "First-page author order and equal-contribution / corresponding-author footnotes"
+    },
+    {
+      "paper_id": "2607.19935",
+      "author": "Zhiwei Yang",
+      "role": "Co-first author",
+      "role_zh": "共同第一作者",
+      "source": "https://arxiv.org/pdf/2607.19935v1",
+      "evidence": "First-page author order and equal-contribution / corresponding-author footnotes"
+    },
+    {
+      "paper_id": "2607.21642",
+      "author": "Zhiwei Yang",
+      "role": "Co-first author",
+      "role_zh": "共同第一作者",
+      "source": "https://arxiv.org/html/2607.21642v2",
+      "evidence": "First-page author order and equal-contribution / corresponding-author footnotes"
+    },
+    {
+      "paper_id": "2606.15088",
+      "author": "Zhiwei Yang",
+      "role": "Co-first author",
+      "role_zh": "共同第一作者",
+      "source": "https://arxiv.org/pdf/2606.15088",
+      "evidence": "First-page author order and equal-contribution / corresponding-author footnotes"
+    },
+    {
+      "paper_id": "10.1609/aaai.v40i19.38647",
+      "author": "Zhiwei Yang",
+      "role": "First author",
+      "role_zh": "第一作者",
+      "source": "https://ojs.aaai.org/index.php/AAAI/article/download/38647/42609",
+      "evidence": "First-page author order and equal-contribution / corresponding-author footnotes"
+    },
+    {
+      "paper_id": "10.1145/3773966.3777919",
+      "author": "Zhiwei Yang",
+      "role": "First author",
+      "role_zh": "第一作者",
+      "source": "https://penghao-bdsc.github.io/papers/WSDM2026.pdf",
+      "evidence": "First-page author order and equal-contribution / corresponding-author footnotes"
+    },
+    {
+      "paper_id": "10.1145/3627673.3679537",
+      "author": "Zhiwei Yang",
+      "role": "First author",
+      "role_zh": "第一作者",
+      "source": "https://arxiv.org/pdf/2407.18274",
+      "evidence": "First-page author order and equal-contribution / corresponding-author footnotes"
+    }
+  ],
+  "figure_sources": [
+    {
+      "asset": "assets/images/lfevent-overview.png",
+      "paper": "Label-Free Contrastive Learning for Open-World Multimodal Social Event Detection",
+      "source": "https://penghao-bdsc.github.io/papers/WSDM2026.pdf",
+      "pdf_page": 4,
+      "figure": 2,
+      "caption": "The proposed LFEvent framework",
+      "method": "Original PDF region rendered at 300 dpi; no redrawing",
+      "width": 1892,
+      "height": 1271
+    }
+  ],
+  "author_role_labels_displayed": false
+}

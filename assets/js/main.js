@@ -60,7 +60,8 @@
     const threshold = header.getBoundingClientRect().height + 95;
     const atBottom = scrollY > 0 && innerHeight + scrollY >= document.documentElement.scrollHeight - 2;
     const current = atBottom ? sections[sections.length - 1].id : sections.reduce((active, section) => section.getBoundingClientRect().top <= threshold ? section.id : active, 'about-me');
-    const target = current === 'selected-work' ? 'publications' : current;
+    // The Publications navigation covers both selected work and the full list.
+    const target = current === 'publications' ? 'selected-work' : current;
     navLinks.forEach((link) => {
       const active = link.dataset.section === target;
       link.classList.toggle('is-active', active);

@@ -15,7 +15,7 @@
   <title>Zhiwei Yang | Academic Homepage</title>
   <link rel="canonical" href="https://yzw66.github.io/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/styles.css?v=20261016-education-badges">
+  <link rel="stylesheet" href="assets/css/styles.css?v=20261016-paper-news">
   <script>
     try {
       const theme = localStorage.getItem('site-theme');
@@ -38,7 +38,7 @@
       <nav class="primary-nav" id="site-navigation" aria-label="Primary navigation">
         <a href="#about-me" data-section="about-me" data-en="About Me" data-zh="关于我">About Me</a>
         <a href="#news" data-section="news" data-en="News" data-zh="动态">News</a>
-        <a href="#publications" data-section="publications" data-en="Publications" data-zh="论文">Publications</a>
+        <a href="#selected-work" data-section="selected-work" data-en="Publications" data-zh="论文">Publications</a>
         <a href="#service" data-section="service" data-en="Services" data-zh="学术服务">Services</a>
         <a href="#education" data-section="education" data-en="Education" data-zh="教育经历">Education</a>
         <a href="#honors" data-section="honors" data-en="Honors and Awards" data-zh="荣誉与奖励">Honors and Awards</a>
@@ -110,32 +110,54 @@
         </div>
       </section>
       <section class="content-section section-anchor" id="news" aria-labelledby="news-title">
-        <h2 class="section-title" id="news-title"><svg class="section-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2c1 6-6 6-5 11-2-1-3-3-3-3-2 5 0 12 7 12s10-7 6-12c0 3-2 3-2 3 2-6-1-9-3-11Z"></path></svg><span data-en="News" data-zh="近期动态">News</span></h2>
+        <h2 class="section-title" id="news-title"><span class="section-emoji" aria-hidden="true">🔥</span><span data-en="Latest News" data-zh="最新动态">Latest News</span></h2>
+        <!-- Monthly dates and author-role evidence are recorded in docs/content-sources.json. -->
         <div class="news-scroll"><ul class="news-list">
-              <li>
-                <time datetime="2026">2026</time>
-                <p><span class="news-celebration" aria-hidden="true">🎉</span> <strong>WSDM 2026</strong> <span data-en="— Label-Free Contrastive Learning for Open-World Multimodal Social Event Detection." data-zh="——无标签对比学习用于开放世界多模态社会事件检测。">— Label-Free Contrastive Learning for Open-World Multimodal Social Event Detection.</span></p>
+              <li data-date-basis="arxiv-release">
+                <time datetime="2026-09">2026.09</time>
+                <p><span class="news-celebration" aria-hidden="true">🎉</span> <span data-en="Released the " data-zh="发布 ">Released the </span><a href="https://arxiv.org/abs/2609.06059" target="_blank" rel="noopener noreferrer" data-en="OmniStepBench" data-zh="OmniStepBench">OmniStepBench</a><span data-en=" preprint on deployment-aware agent evaluation." data-zh=" 预印本，研究面向部署的智能体评测。"> preprint on deployment-aware agent evaluation.</span></p>
               </li>
-              <li>
-                <time datetime="2026">2026</time>
-                <p><span class="news-celebration" aria-hidden="true">🎉</span> <strong>AAAI 2026</strong> <span data-en="— Structural Entropy Guided Incremental Learning for Open-World Multimodal Social Event Detection." data-zh="——结构熵引导的开放世界多模态社会事件增量学习。">— Structural Entropy Guided Incremental Learning for Open-World Multimodal Social Event Detection.</span></p>
+              <li data-date-basis="arxiv-release">
+                <time datetime="2026-09">2026.09</time>
+                <p><span class="news-celebration" aria-hidden="true">🎉</span> <span data-en="Released the " data-zh="发布 ">Released the </span><a href="https://arxiv.org/abs/2609.03493" target="_blank" rel="noopener noreferrer" data-en="NTEP-R" data-zh="NTEP-R">NTEP-R</a><span data-en=" preprint on necessary tool-evidence path rewards." data-zh=" 预印本，研究必要工具证据路径奖励。"> preprint on necessary tool-evidence path rewards.</span></p>
               </li>
-              <li>
-                <time datetime="2026">2026</time>
-                <p><span class="news-celebration" aria-hidden="true">🎉</span> <strong>CARE</strong> <span data-en="— Pre-execution command verification for shell-executing LLM agents released as a preprint." data-zh="——面向执行 Shell 命令的大模型智能体，发布执行前命令验证预印本。">— Pre-execution command verification for shell-executing LLM agents released as a preprint.</span></p>
+              <li data-date-basis="conference-notification">
+                <time datetime="2026-08">2026.08</time>
+                <p><span class="news-celebration" aria-hidden="true">🎉</span> <a href="https://arxiv.org/abs/2608.25531" target="_blank" rel="noopener noreferrer" data-en="ClueWeaver" data-zh="ClueWeaver">ClueWeaver</a><span data-en=" was accepted to ICONIP 2026." data-zh=" 获 ICONIP 2026 录用。"> was accepted to ICONIP 2026.</span></p>
               </li>
-              <li>
-                <time datetime="2025">2025</time>
-                <p><span class="news-celebration" aria-hidden="true">🎉</span> <strong>AAAI 2025</strong> <span data-en="— HyperSED studies efficient unsupervised event detection in hyperbolic space." data-zh="——HyperSED 研究双曲空间中的高效无监督事件检测。">— HyperSED studies efficient unsupervised event detection in hyperbolic space.</span></p>
+              <li data-date-basis="arxiv-release">
+                <time datetime="2026-07">2026.07</time>
+                <p><span class="news-celebration" aria-hidden="true">🎉</span> <span data-en="Released the " data-zh="发布 ">Released the </span><a href="https://arxiv.org/abs/2607.19935" target="_blank" rel="noopener noreferrer" data-en="MOF-Sleuth" data-zh="MOF-Sleuth">MOF-Sleuth</a><span data-en=" preprint on tool-grounded agents for MOF CIF auditing." data-zh=" 预印本，研究工具驱动的 MOF CIF 智能体审计。"> preprint on tool-grounded agents for MOF CIF auditing.</span></p>
               </li>
-              <li>
-                <time datetime="2024">2024</time>
-                <p><span class="news-celebration" aria-hidden="true">🎉</span> <strong>CIKM 2024</strong> <span data-en="— ADP-SEMEvent combines adaptive differential privacy with structural entropy minimization." data-zh="——ADP-SEMEvent 将自适应差分隐私与结构熵最小化相结合。">— ADP-SEMEvent combines adaptive differential privacy with structural entropy minimization.</span></p>
+              <li data-date-basis="arxiv-release">
+                <time datetime="2026-07">2026.07</time>
+                <p><span class="news-celebration" aria-hidden="true">🎉</span> <span data-en="Released the " data-zh="发布 ">Released the </span><a href="https://arxiv.org/abs/2607.21642" target="_blank" rel="noopener noreferrer" data-en="CARE" data-zh="CARE">CARE</a><span data-en=" preprint on pre-execution command verification for LLM agents." data-zh=" 预印本，研究大模型智能体的执行前命令验证。"> preprint on pre-execution command verification for LLM agents.</span></p>
+              </li>
+              <li data-date-basis="arxiv-release">
+                <time datetime="2026-06">2026.06</time>
+                <p><span class="news-celebration" aria-hidden="true">🎉</span> <span data-en="Released a preprint on " data-zh="发布">Released a preprint on </span><a href="https://arxiv.org/abs/2606.15088" target="_blank" rel="noopener noreferrer" data-en="pathway-dependent forgetting" data-zh="音乐知识路径依赖遗忘">pathway-dependent forgetting</a><span data-en=" of musical knowledge." data-zh="研究预印本。"> of musical knowledge.</span></p>
+              </li>
+              <li data-date-basis="conference-notification">
+                <time datetime="2025-11">2025.11</time>
+                <p><span class="news-celebration" aria-hidden="true">🎉</span> <a href="https://doi.org/10.1609/aaai.v40i19.38647" target="_blank" rel="noopener noreferrer" data-en="SeInEvent" data-zh="SeInEvent">SeInEvent</a><span data-en=" was accepted to AAAI 2026." data-zh=" 获 AAAI 2026 录用。"> was accepted to AAAI 2026.</span></p>
+              </li>
+              <li data-date-basis="conference-notification">
+                <time datetime="2025-10">2025.10</time>
+                <p><span class="news-celebration" aria-hidden="true">🎉</span> <a href="https://doi.org/10.1145/3773966.3777919" target="_blank" rel="noopener noreferrer" data-en="LFEvent" data-zh="LFEvent">LFEvent</a><span data-en=" was accepted to WSDM 2026." data-zh=" 获 WSDM 2026 录用。"> was accepted to WSDM 2026.</span></p>
+              </li>
+              <li data-date-basis="conference-notification">
+                <time datetime="2024-12">2024.12</time>
+                <p><span class="news-celebration" aria-hidden="true">🎉</span> <a href="https://doi.org/10.1609/aaai.v39i12.33430" target="_blank" rel="noopener noreferrer" data-en="HyperSED" data-zh="HyperSED">HyperSED</a><span data-en=" was accepted to AAAI 2025." data-zh=" 获 AAAI 2025 录用。"> was accepted to AAAI 2025.</span></p>
+              </li>
+              <li data-date-basis="conference-notification">
+                <time datetime="2024-07">2024.07</time>
+                <p><span class="news-celebration" aria-hidden="true">🎉</span> <a href="https://doi.org/10.1145/3627673.3679537" target="_blank" rel="noopener noreferrer" data-en="ADP-SEMEvent" data-zh="ADP-SEMEvent">ADP-SEMEvent</a><span data-en=" was accepted to CIKM 2024." data-zh=" 获 CIKM 2024 录用。"> was accepted to CIKM 2024.</span></p>
               </li>
             </ul></div>
       </section>
       <section class="content-section section-anchor" id="selected-work" aria-labelledby="selected-title">
         <h2 class="section-title" id="selected-title"><svg class="section-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m13 3 2.5 6.5L22 12l-6.5 2.5L13 21l-2.5-6.5L4 12l6.5-2.5L13 3ZM4 2v4M2 4h4M3 18v4M1 20h4"></path></svg><span data-en="First / Co-first / Corresponding Author Papers" data-zh="一作/共一/通讯论文">First / Co-first / Corresponding Author Papers</span></h2>
+        <div class="publication-section-links"><a href="#publications" data-en="View all publications ↓" data-zh="查看完整论文列表 ↓">View all publications ↓</a></div>
         <div class="lead-paper-list">
           <article class="lead-paper">
             <a class="lead-paper-overview" href="assets/images/omnistepbench-figure1.png" target="_blank" rel="noopener noreferrer" aria-label="View OmniStepBench Figure 1">
@@ -243,9 +265,9 @@
             </div>
           </article>
           <article class="lead-paper">
-            <a class="lead-paper-overview" href="assets/images/label-free-overview.svg" target="_blank" rel="noopener noreferrer" aria-label="View Label-Free Contrastive Learning overview">
+            <a class="lead-paper-overview lead-paper-overview--detailed lead-paper-overview--lfevent" href="assets/images/lfevent-overview.png" target="_blank" rel="noopener noreferrer" aria-label="View LFEvent Figure 2: the proposed framework">
               <span class="lead-paper-badge">WSDM 2026</span>
-              <img src="assets/images/label-free-overview.svg" alt="LFEvent method schematic redrawn from the published abstract" width="1200" height="480" loading="lazy" decoding="async">
+              <img src="assets/images/lfevent-overview.png" alt="LFEvent Figure 2: MLLM-based semantic enhancement, cross-modal attention, contrastive learning, and open-world clustering" data-alt-en="LFEvent Figure 2: MLLM-based semantic enhancement, cross-modal attention, contrastive learning, and open-world clustering" data-alt-zh="LFEvent 原文图 2：多模态大模型语义增强、跨模态注意力、对比学习与开放世界聚类" width="1892" height="1271" loading="lazy" decoding="async">
             </a>
             <div class="lead-paper-info">
               <h3><a href="https://doi.org/10.1145/3773966.3777919" target="_blank" rel="noopener noreferrer">Label-Free Contrastive Learning for Open-World Multimodal Social Event Detection</a></h3>
@@ -275,7 +297,8 @@
         </div>
       </section>
       <section class="content-section section-anchor" id="publications" aria-labelledby="publications-title">
-        <h2 class="section-title" id="publications-title"><svg class="section-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-8M16 2l6 6-10 10H6v-6L16 2Z"></path></svg><span data-en="Publications" data-zh="论文列表">Publications</span></h2>
+        <h2 class="section-title" id="publications-title"><svg class="section-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-8M16 2l6 6-10 10H6v-6L16 2Z"></path></svg><span data-en="All Publications" data-zh="完整论文列表">All Publications</span></h2>
+        <div class="publication-section-links"><a href="#selected-work" data-en="Back to first / co-first / corresponding author papers ↑" data-zh="返回一作/共一/通讯论文 ↑">Back to first / co-first / corresponding author papers ↑</a></div>
         <div class="publication-toolbar">
           <div class="publication-filters" role="group" aria-label="Filter publications by year"><span class="filter-label" data-en="Year" data-zh="年份">Year</span>
                 <button type="button" class="filter-button is-active" data-filter="all" aria-pressed="true" data-en="All Publications" data-zh="全部论文">All Publications</button>
@@ -505,6 +528,6 @@
     </div>
   </main>
   <footer class="site-footer"><div class="footer-inner"><p>© <span class="current-year">2026</span> Zhiwei Yang</p><a href="#top" data-en="Back to top ↑" data-zh="返回顶部 ↑">Back to top ↑</a></div></footer>
-  <script src="assets/js/main.js?v=20261016-education" defer></script>
+  <script src="assets/js/main.js?v=20261016-paper-news" defer></script>
 </body>
 </html>
