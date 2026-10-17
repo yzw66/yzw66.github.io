@@ -177,12 +177,13 @@
     "updated_on": "2026-10-17",
     "source": "Homepage owner's award list supplied in this conversation on 2026-10-17",
     "verification": "Owner-provided; award certificates were not independently checked.",
-    "display_policy": "Show award names, years and prize levels; retain the stated second-place result in Hebei in 2023. Omit selection percentages, eligibility thresholds and ambiguous TOP300 annotations. Display M and H using their named award classifications.",
+    "display_policy": "Show award names, years and prize levels. Omit selection percentages, eligibility thresholds, TOP300 annotations, the second-place-in-Hebei annotation and the aggregate undergraduate award count at the owner's request. Display M and H using their named award classifications.",
     "corrections": [
       "MCM M Award belongs to 2022; the 2023 result is the H Award.",
       "The 2022 statistical modeling result is National First Prize; remove the previous fourth-nationwide claim, which is not supported by the new list.",
       "National Encouragement Scholarship is listed under both 2022 and 2023.",
-      "Use the supplied Outstanding Student Scholarship name without claiming first-class rank or four consecutive award years."
+      "Use the supplied Outstanding Student Scholarship name without claiming first-class rank.",
+      "The owner explicitly confirmed that both the Outstanding Student Scholarship and Outstanding Student Honor were awarded in each of 2021, 2022, 2023 and 2024. List each award under each confirmed year."
     ],
     "additions": [
       "2023: MCM H Award; National Third Prize in the Chinese Mathematics Competitions for College Students.",

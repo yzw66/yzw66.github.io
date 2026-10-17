@@ -135,7 +135,7 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--violet); outlin
 .news-list time::after { content: ":"; margin-left: 4px; }
 .news-list p { margin: 0; }
 /* Keep icons added beside paper links in the surrounding text flow. */
-.news-list p svg, .news-list p img { display: inline-block; vertical-align: middle; }
+:is(.news-list p, .lead-paper h3, .publication-item h4) :is(svg, img) { display: inline-block; vertical-align: middle; }
 .news-list strong { color: var(--violet); font-weight: 700; }
 .news-list a { color: var(--violet); font-weight: 700; text-decoration: none; }
 .news-list a:hover { text-decoration: underline; }
@@ -194,7 +194,6 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--violet); outlin
 .honor-list li + li { margin-top: 5px; }
 .honor-list li::marker { color: var(--violet); }
 .honor-list strong { color: var(--heading); }
-.honors-note { margin: 15px 0 0; color: var(--muted); font-size: 13px; }
 .site-footer { margin-top: 40px; border-top: 1px solid var(--border); }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 15px; max-width: 1280px; margin: 0 auto; padding: 22px 15px; color: var(--muted); font-size: 12px; }
 .footer-inner p { margin: 0; }
