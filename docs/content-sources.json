@@ -172,5 +172,22 @@
       "height": 1271
     }
   ],
-  "author_role_labels_displayed": false
+  "author_role_labels_displayed": false,
+  "honors_update": {
+    "updated_on": "2026-10-17",
+    "source": "Homepage owner's award list supplied in this conversation on 2026-10-17",
+    "verification": "Owner-provided; award certificates were not independently checked.",
+    "display_policy": "Show award names, years and prize levels; retain the stated second-place result in Hebei in 2023. Omit selection percentages, eligibility thresholds and ambiguous TOP300 annotations. Display M and H using their named award classifications.",
+    "corrections": [
+      "MCM M Award belongs to 2022; the 2023 result is the H Award.",
+      "The 2022 statistical modeling result is National First Prize; remove the previous fourth-nationwide claim, which is not supported by the new list.",
+      "National Encouragement Scholarship is listed under both 2022 and 2023.",
+      "Use the supplied Outstanding Student Scholarship name without claiming first-class rank or four consecutive award years."
+    ],
+    "additions": [
+      "2023: MCM H Award; National Third Prize in the Chinese Mathematics Competitions for College Students.",
+      "2022: Hebei First Prize in undergraduate mathematical modeling; Hebei First Prize in energy conservation and emission reduction; Hebei Second Prize in Winter Olympics research; MathorCup Second Prize.",
+      "Undergraduate years: repeated Outstanding Student Honor at North China University of Science and Technology."
+    ]
+  }
 }
